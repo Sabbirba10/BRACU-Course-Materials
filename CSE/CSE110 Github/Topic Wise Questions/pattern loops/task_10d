@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class pattern4_7d {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();             //row =8
+        int i = 0;
+        for (int rc = 1; rc <= row; rc++) {
+
+            for (int sC = 1; sC <= (row * 2) - rc - i; sC++) {
+                System.out.print(" ");
+
+            }
+            for (int cc = 1; cc <= rc; cc++) { //1 hole 15 sc 1p, 2 hole 13 sc 2p, 3 hole 11 sc 3p
+                System.out.print("# ");                      // 4 hole 9 sc 4p
+            }
+            System.out.println();
+            i++;
+        }
+    }
+}
+
+/*
+amra 16 column x 8 row wala matrix banaya bair kori sob koita space koita rc ar koita print
+ */
+
+
+/*
+int row = sc.nextInt();   //row =8
+    for(int rc=1; rc<=row;rc++) {
+      for(int sC=1; sC<=rc-1; sC++){
+        System.out.print("  ");
+      }
+      for (int cc = 1; cc <= row - rc + 1; cc++) {
+        System.out.print("# ");
+      }
+      System.out.println();
+    }
+ */

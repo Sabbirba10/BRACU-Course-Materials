@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class no9 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter an integer: ");
+    int num = sc.nextInt();
+    for (int i = 1; i <= num; i++) {
+      int x = 1 ;
+      for(int j = num; j >= 1; j--) {
+        if (i<j){
+          System.out.print(" ");
+        }
+        else{
+          System.out.print(""+x) ;
+          x++ ;
+        }
+      }
+      System.out.println();
+    }
+  }
+} 
+

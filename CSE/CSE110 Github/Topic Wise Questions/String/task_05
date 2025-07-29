@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+public class task5 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Please enter input");
+    String s1 = sc.nextLine();
+    int Vcount=0;
+    int Ccount=0;
+    for (int i = 0; i < s1.length(); i++) {
+      if (s1.charAt(i) == 'a' || s1.charAt(i) == 'e'
+            || s1.charAt(i) == 'i' || s1.charAt(i) == 'o' ||
+          s1.charAt(i) == 'u') {
+        Vcount++;
+      } else if ((s1.charAt(i) >= 'a' &&
+                  s1.charAt(i) <= 'z') || (s1.charAt(i) >= 'A') &&
+                 s1.charAt(i) <= 'Z') {
+        Ccount++;
+      }
+    }
+    if (Vcount % 3 == 0 && Ccount % 5 == 0 &&
+        (Vcount > 0 && Ccount > 0)) {
+      System.out.println("Aaarr! Me Plunder!!");
+    } else {
+      System.out.println("Blimey! No Plunder!!");
+                           }
+}
+}

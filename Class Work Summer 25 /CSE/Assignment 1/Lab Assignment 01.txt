@@ -1,0 +1,178 @@
+// Task1a
+
+public class Task1a {
+  public static void main (String [] args){
+    int hungry = 10;
+    System.out.print(hungry);
+  }
+}
+
+// Task1b
+
+public class Task1b {
+  public static void main (String [] args){
+    int 2AB = 10;
+    System.out.print(2AB); // cant't start var with a number
+  }
+}
+
+// Task1c
+
+public class Task1c {
+  public static void main (String [] args){
+    int 312.2 = 10;
+    System.out.print(312.2); // variabe can't be only number
+  }
+}
+
+// Task1d
+
+public class Task1d {
+  public static void main (String [] args){
+    int MOBILE = 10;
+    System.out.print(MOBILE);
+  }
+}
+
+// Task1e
+
+public class Task1e {
+  public static void main (String [] args){
+    int "Ans" = 10;
+    System.out.print("Ans"); // can't use special character as variable
+  }
+}
+
+
+// Task1f
+
+public class Task1f {
+  public static void main (String [] args){
+    int $30 = 10;
+    System.out.print($30);
+  }
+}
+
+// Task1g
+
+public class Task1g {
+  public static void main (String [] args){
+    int Yes/No = 10;
+    System.out.print(Yes/No); // Cant use spacial chatecter into variable
+  }
+}
+
+
+// Task1h
+
+public class Task1h {
+  public static void main (String [] args){
+    int student-id = 10;
+    System.out.print(student-id); // can't use special character as a varial 
+  }
+}
+
+
+// Task1i
+
+public class Task1i {
+  public static void main (String [] args){
+    int A+3 = 10;
+    System.out.print(A+3); // can't use special charecter as a variable
+  }
+}
+
+// Task1j
+
+public class Task1j {
+  public static void main (String [] args){
+    int 'J' = 10;
+    System.out.print('J'); // can't use special charecter as a variable
+  }
+}
+
+
+// Task1k
+
+public class Task1k {
+  public static void main (String [] args){
+    int return = 10;
+    System.out.print(return); // can't use resevered word as a variable
+  }
+}
+
+
+// Task 2 
+public class Task2 {
+  public static void main (String [] args) {
+    // 2.1
+    int num1 = 5;
+    System.out.println(num1);
+    
+    // 2.2
+    int num2 = 2;
+    int sum = num1+num2;
+    System.out.println(sum); // sum is 7
+    
+    // 2.3
+    int div = num1/num2;
+     System.out.println(div);
+     
+     // 2.4
+     double num3 = 5;
+     double num4 = 2;
+     double div2 = num3/num4;
+     System.out.println(div2);
+     
+     // 2.5
+     double div3 = (double)num1/num2;
+     System.out.println(div3);
+      
+     // 2.6
+     String st = "The String variable";
+     System.out.println(st);
+  }
+}
+    
+    
+// Task 3
+public class Task3 {
+  public static void main (String [] args) {
+    int r = 4;
+    double circle = 2*Math.PI*r;
+    System.out.println("The circumference of circle is "+circle);
+  }
+}
+
+
+// Task 4
+public class Task4 {
+  public static void main (String [] args) {
+    int num1 = 102030;
+    int  pr = num1/10000;
+    System.out.println("Last two digit of that number "+pr);
+  }
+}
+
+
+
+// Task 6
+public class Task6a {
+  public static void main (String [] args) {
+    int a = 10;
+    int b = 5;
+    
+    int c = a;
+    c = b;
+    b = c;
+    System.out.println(a);
+    System.out.println(b);
+    
+    a = a+b;
+    b = a-b;
+    a = a-b;
+    
+    System.out.println(a);
+    System.out.println(b);
+  }
+}

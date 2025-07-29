@@ -1,0 +1,64 @@
+
+public class task7 {
+    public static void main(String[] args) {
+        int arr[] = {23, 100, 23, 56, 100};
+
+        System.out.println("Input array:");
+        for (int i = 0; i < arr.length; i++)
+
+        {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+
+        int[] arr2 = new int[arr.length];
+        int arr2Index = 0;
+
+
+
+
+        for (int i = 0; i < arr.length; i++)
+        {
+            boolean duplicate = false;
+            for (int j = 0; j < arr2Index; j++)
+            {
+                if (arr[i] == arr2[j])
+
+
+                {
+                    duplicate = true;
+                    break;
+                }
+            }
+
+
+            if (!duplicate)
+
+
+            {
+
+                arr2[arr2Index] = arr[i];
+                arr2Index++;
+            }
+
+
+
+        }
+
+
+
+
+
+
+        System.out.println("New array:");
+        for (int i = 0; i < arr2Index; i++)
+
+        {
+            System.out.print(arr2[i] + " ");
+        }
+
+
+
+    }
+}

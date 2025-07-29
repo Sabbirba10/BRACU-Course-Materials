@@ -1,0 +1,34 @@
+public class task18_prev {
+    public static void main(String[] args) {
+        String s1 = "Merry Christmas!";
+        System.out.print(findVowels( s1));
+    }
+    public static String findVowels(String s1){
+        int a=0;
+        int e=0;
+        int i=0;
+        int o=0;
+        int u=0;
+        for(int j=0;j<s1.length();j++){
+            char ch= s1.charAt(j);
+            if(ch=='a'){ // there will 'A'
+                a++;
+            }
+            if(ch=='e'){
+                e++;
+            }
+            if(ch=='i'){
+                i++;
+            }
+            if(ch=='o'){
+                o++;
+            }
+            if(ch=='u'){
+                u++;
+            }
+
+
+        }
+        return "a: " + a + "\ne: " + e + "\ni: " + i + "\no: " + o + "\nu: "+ u;
+    }
+}

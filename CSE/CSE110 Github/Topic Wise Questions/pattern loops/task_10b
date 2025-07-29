@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class pattern4_7b {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();   //row =8
+        int temp= row;
+        for(int rc=1; rc<=temp;rc++) {
+            for (int cc = 1; cc<=row; cc++) {
+                System.out.print("# ");
+            }
+            System.out.println();
+            row--;
+        }
+    }
+}
+
+
+/*
+for (int rc = 1; rc <= rows; rc++) {
+
+            for (int cc = rows; rc<=cc; cc--) {   //1 hole 8 bar, 2 hole 7 bar
+                System.out.print("# ");
+            }
+
+            System.out.println();
+ */

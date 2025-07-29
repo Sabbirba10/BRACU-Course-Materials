@@ -1,0 +1,8 @@
+public class task13 {
+  public static void main(String[] args) {
+    int n= 5576;
+        System.out.println("Enter an integer: " +n);  // Prompt for input integer
+        int lastTwoDigits = n % 100; // Calculate the last two digits
+        System.out.println("The last two digits are: "+ lastTwoDigits);
+    }
+}

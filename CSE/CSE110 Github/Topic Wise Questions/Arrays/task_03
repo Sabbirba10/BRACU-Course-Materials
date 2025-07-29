@@ -1,0 +1,56 @@
+
+import java.util.Scanner;
+import java.util.Arrays;
+public class task3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.print("Enter the length of the array: ");
+        int length = sc.nextInt();
+
+
+
+        int[] arr1 = new int[length];
+        for (int i = 0; i < length; i++) {
+            System.out.print("Enter a number: ");
+            arr1[i] = sc.nextInt();
+        }
+
+
+        //solving with part A:  using a new array (Out-of-Place)
+        int[] arr2 = new int[length];
+        for (int j = 0; j < length; j++) {
+            arr2[j] = arr1[length - 1 - j];   // this is how you should reverse print
+        }
+
+        System.out.println("Reversed using a new array:");
+        for (int y = 0; y < length; y++) {
+            System.out.print(arr2[y] + " ");
+        }
+        System.out.println();
+
+
+        // Part B: Reverse using original array (In-Place)
+
+        for (int i = 0; i < length / 2; i++) {
+            int temp = arr1[i];
+            arr1[i] = arr1[length - 1 - i];
+            arr1[length - 1 - i] = temp;
+        }
+/* ekhane ki korse hoitase... 1st to half copy korse temp e, last 3 ta store korse
+1st 3 ta te, and then temp (jetate 1st 3 ta ase) jeta rakhse last 3 ta te
+
+1st element ta temp e rakhse, last element ta 1st e rakhse, temp ta re last e rakhse
+so swap 1st and last
+
+2nd element ta temp e rakhse, second last element ta 2nd e rakhse, temp ta re 2nd last e rakhse
+so swap 2nd and 2nd last...
+ */
+        System.out.println("Reversed using the original array:");
+        for (int i = 0; i < length; i++) {
+            System.out.print(arr1[i] + " ");
+        }
+        System.out.println();
+    }
+}

@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class pattern4_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int r = sc.nextInt();
+
+        for (int rC = 1; rC <= r; rC++) {
+            for (int cC = r-rC+1; cC<=r; cC++) {
+                System.out.print(cC);       //we need to make changes here
+            }
+            System.out.println();
+        }
+    }
+}
+/* ekhane ja korse int cC te emn value boshaise je
+jeta first e 5 dei, then loop theke bair hoi
+then 4 dei cC++ hoye 5 dei then loop theke bair hoi
+then 3,4,5 dei then loop theke bair hoi
+ */
+
+/*
+
+EDA ANSWER
+
+
+
+import java.util.Scanner;
+
+public class Pattern4_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int r = sc.nextInt();
+
+        for (int rC = 1; rC <= r; rC++) {
+            for (int cC = r - rC + 1; cC <= r; cC++) {
+                System.out.print(cC);
+            }
+            System.out.println();
+        }
+    }
+}
+
+ */

@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class Task8 {
+    public static void main(String[] args) {
+      while (true) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+        if (num < 0) break;
+        System.out.println(num + "^2 = " + (num*num));
+        }
+    }
+}

@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class task17 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 4, 20, 3, 10, 5};
+        int sum = 33; // Correct sum based on the task description
+        int[] arr2 = new int[3];
+
+        for (int i = 0; i < arr1.length - 2; i++) {
+            for (int j = i + 1; j < arr1.length - 1; j++) {
+                for (int x = j + 1; x < arr1.length; x++) {
+                    if (arr1[i] + arr1[j] + arr1[x] == sum) {
+                        // Assign the values to arr2
+                        arr2[0] = arr1[i];
+                        arr2[1] = arr1[j];
+                        arr2[2] = arr1[x];
+                        // Print the array when the sum is found
+                        System.out.println("Subarray with given sum " + sum + ": " + arr2[0] + ", " + arr2[1] + ", " + arr2[2]);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+notice  i=0   i<l-2   j=i+1 we give this becuz so jokhon i last element hobe, j=i+1 hobe jeta out of bounds
+also x o jehetu ache  so max i can go be 3rd last element so j can check till 2nd last and x last
+NOTICE WE CANT DO THIS ULTA JE i <l  x<l-2  nahole i toh l-1 hobe, x hobe l+2 jeta impossible
+
+ */

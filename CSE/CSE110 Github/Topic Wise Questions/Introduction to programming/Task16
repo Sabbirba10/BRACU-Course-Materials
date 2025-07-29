@@ -1,0 +1,18 @@
+public class task16 {
+  public static void main(String[] args) {
+    int  minutes = 3456789;   // Given number of minutes according to question
+    int minutesInHour = 60;
+    int hoursInDay = 24;
+    int daysInYear = 365;
+    
+    int totalyears = minutesInHour * hoursInDay * daysInYear;
+    int totaldays= minutesInHour * hoursInDay;
+    int years_ans = minutes / totalyears;
+    int remainingMins = minutes % totalyears;
+    int days_ans = remainingMins / totaldays;
+    
+    System.out.println("years: "+years_ans);
+    System.out.println("days: "+days_ans);
+  
+  }
+}

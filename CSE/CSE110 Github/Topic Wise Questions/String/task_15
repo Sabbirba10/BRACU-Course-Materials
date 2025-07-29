@@ -1,0 +1,38 @@
+public class task17_prev {
+    public static void main(String[] args) {
+        String s1 = "I love Ecology even in summer";
+        int count = 0;
+        // Iterate through the string to check spaces and neighboring characters
+        for (int i = 0; i < s1.length(); i++) {
+            char ch = s1.charAt(i);
+            if (ch == ' ') {
+                if (i > 0 && (s1.charAt(i - 1) == 'e' || s1.charAt(i - 1) == 'E')) {
+                    count++;
+                }
+                if (i < s1.length() - 1 && (s1.charAt(i + 1) == 'e' || s1.charAt(i + 1) == 'E')) {
+                    count++;
+                }
+                /*
+                i < s1.length() - 1 is necessary to avoid an IndexOutOfBoundsException. You are checking the character after the current
+                one using s1.charAt(i + 1). Without this boundary check, attempting to access s1.charAt(i + 1) at the
+                end of the string will result in an exception.
+                 */
+            }
+        }
+
+        // Check each character for 'e' or 'E' at the beginning
+        if (s1.charAt(0) == 'e' || s1.charAt(0) == 'E') {
+            count++;
+        }
+
+        // Check last character if it's 'e' or 'E'
+        if (s1.charAt(s1.length() - 1) == 'e' || s1.charAt(s1.length() - 1) == 'E') {
+            count++;
+        }
+
+        System.out.println(count);  // Expected Output: 2
+    }
+}
+
+
+// s1= ' ' + s1 + ' '

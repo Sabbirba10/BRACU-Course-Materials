@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class week11C1
+{
+//Access_Modifier static void/return_type method_name(Parameters)
+  
+  public static void main(String[]args)
+  {
+    Scanner sc = new Scanner(System.in);  
+    System.out.println("Main method starts");
+    
+    System.out.println("Main method ends");
+  }
+}

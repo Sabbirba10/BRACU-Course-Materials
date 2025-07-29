@@ -1,0 +1,21 @@
+public class task8 {
+    public static void main(String[] args) {
+        double payment = 30000; 
+        int age = 25; 
+        double tax = 0;
+
+        if (age < 18) {
+            System.out.println("Your tax amounts in 0 Tk");
+        } else {
+            if (payment < 10000) {
+                System.out.println("Your tax amounts in 0 Tk");
+            } else if (payment >= 10000 && payment <= 20000) {
+                tax = payment * 0.05; // 5% tax
+                System.out.println("Your tax amounts in " + tax+ " Tk" );
+            } else { // payment > 20000
+                tax = payment * 0.10; // 10% tax
+                System.out.println("Your tax amounts in " + tax+ " Tk");
+            }
+        }
+    }
+}

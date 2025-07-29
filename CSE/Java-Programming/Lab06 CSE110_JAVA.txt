@@ -1,0 +1,507 @@
+
+Classwork###############################################################################
+
+
+
+Task02-------------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the height of the left-justified right triangle: ");
+        int height = scanner.nextInt();
+        
+        // Generating the left-justified right triangle
+        for (int r = 1; r <= height; r++) {
+            // Printing numbers in each row
+            for (int c = 1; c <= height; c++) {
+              if (c <= r) { 
+                System.out.print(c+ " ");
+              }
+            }   
+            // Moving to the next line after printing each row
+            System.out.println();
+        }        
+        scanner.close();
+    }
+}
+
+
+
+Alter Task02--------------------------------------------------------------------------
+
+
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the height of the left-justified hollow right triangle: ");
+        int height = scanner.nextInt();
+        
+        // Generating the left-justified hollow right triangle
+        for (int r = 1; r <= height; r++) {
+            // Printing numbers in each row
+            for (int c = 1; c <= r; c++) {
+              System.out.print(c);
+    
+            }           
+            // Moving to the next line after printing each row
+            System.out.println();
+        }        
+        scanner.close();
+    }
+}
+
+
+
+
+Task03---------------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the height of the right triangle: ");
+        int height = scanner.nextInt();
+        
+        // Generating the right-justified right triangle
+        for (int r = 1; r <= height; r++) {
+            // Printing numbers and spaces in each row
+            for (int c = 1; c <= height; c++) {
+                if (c <= height - r) {
+                    // Print spaces for right justification
+                    System.out.print("    ");
+                } else {
+                    // Print numbers
+                    System.out.print(c+"  ");
+                }
+            }
+            
+            // Moving to the next line after printing each row
+            System.out.println();
+        }        
+        scanner.close();
+    }
+}
+
+
+Task04-------------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the height of the isosceles triangle: ");
+        int height = scanner.nextInt();
+        
+
+        for (int r = 1; r <= height; r++) {
+            // Printing numbers in each row
+          for (int s=1; s<=((2*height) - (2* r)); s++) {
+            System.out.print("  ");
+          }
+          for (int c = 1; c <= 2*r-1 ; c++) {
+            System.out.print(c+"  ");
+          }
+            
+            // Moving to the next line after printing each row
+            System.out.println();
+        }        
+        scanner.close();
+    }
+}
+
+
+
+
+Class Evaluation###########################################################################
+
+
+
+Task01--------------------------------------------------------------------------------
+
+
+import java.util.Scanner; 
+public class Name {
+  public static void main(String[] args) { 
+    Scanner sc = new Scanner (System.in); 
+    int num = sc.nextInt();
+    for (int i = 0; i < num; i++) {
+      for (int j = 1; j <= num; j++) {     
+        if (j==num) {
+          System.out.println(j);
+          System.out.println();
+        }
+        else {
+          System.out.print(j);
+        }
+      }
+    }  
+  
+    
+  }
+}
+
+
+
+
+Task02-------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the height of the right triangle: ");
+        int height = scanner.nextInt();
+        
+        // Generating the right-justified right triangle
+        for (int r = 1; r <= height; r++) {
+            // Printing numbers and spaces in each row
+            for (int c = 1; c <= height; c++) {
+                if (c <= height - r) {
+                    // Print spaces for right justification
+                    System.out.print("    ");
+                } else {
+                    // Print numbers
+                    System.out.print(c - (height - r) + "  ");
+                }
+            }
+            
+            // Moving to the next line after printing each row
+            System.out.println();
+        }        
+        scanner.close();
+    }
+}
+
+
+
+
+
+
+
+Homework##############################################################################
+
+
+
+Task01------------------------------------------------------------------------------
+
+
+
+
+import java.util.Scanner; 
+public class Name {
+  public static void main(String[] args) { 
+    Scanner sc = new Scanner (System.in); 
+    System.out.print("Enter the length of the rectangle: ");
+    int length = sc.nextInt();
+    System.out.print("Enter the width of the rectangle: ");
+    int width = sc.nextInt();
+    for (int i = 0; i < width; i++) {
+      for (int j = length; j >0; j--) {     
+        if (j==1) {
+          System.out.println(j);
+        }
+        else {
+          System.out.print(j+" ");
+        }
+      }
+    }  
+  
+    
+  }
+}
+
+
+
+
+Task02-------------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the height of the palindromic isosceles triangle: ");
+        int height = scanner.nextInt();
+        
+        // Generating the palindromic isosceles triangle
+        for (int r = 1; r <= height; r++) {
+            // Printing leading spaces
+          for (int s=1; s<=((2*height) - (2* r)); s++) {
+            System.out.print("  ");
+          }
+            
+            // Printing ascending and descending numbers
+            for (int c = 1; c <= 2*r - 1; c++) {
+                if (c <= r) {
+                    System.out.print(c+"  ");
+                } else {
+                  System.out.print(2*r-c+"  ");
+                }
+
+            }
+            
+            // Moving to the next line after printing each row
+            System.out.println();
+        }
+        
+        scanner.close();
+    }
+}
+
+
+
+
+
+Task03--------------------------------------------------------------------------------
+
+
+
+import java.util.Scanner;
+
+public class Name{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the length of the rectangle: ");
+        int length = scanner.nextInt();
+        System.out.print("Enter the width of the rectangle: ");
+        int width = scanner.nextInt();
+        
+        // Generating the hollow rectangle
+        for (int i = 1; i <= width; i++) {
+            // Print numbers in the first and last rows
+            if (i == 1 || i == width) {
+                for (int j = 1; j <= length; j++) {
+                    System.out.print(j);
+                }
+            } else { // Print spaces for inner rows
+                System.out.print(1);
+                for (int j = 2; j < length; j++) {
+                    System.out.print("  ");  
+                }
+                System.out.print(length);
+            }
+            // Move to the next line after each row
+            System.out.println();
+        }
+        
+        scanner.close();
+    }
+}
+
+
+
+
+
+Task04----------------------------------------------------------------------------------
+
+
+
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the height of the left-justified hollow right triangle: ");
+        int height = scanner.nextInt();
+        
+        // Generating the left-justified hollow right triangle
+        for (int r = 1; r <= height; r++) {
+            // Printing numbers in each row
+            for (int c = 1; c <= r; c++) {
+                if (c == 1 || c == r || r == height) {
+                    System.out.print(c + "  ");
+                } else {
+                    System.out.print("    ");
+                }
+            }           
+            // Moving to the next line after printing each row
+            System.out.println();
+        }        
+        scanner.close();
+    }
+}
+
+
+
+
+Task05------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the height of the isosceles triangle: ");
+        int height = scanner.nextInt();
+        
+
+        for (int r = 1; r <= height; r++) {
+            // Printing numbers in each row
+          for (int s=1; s<=((2*height) - (2* r)); s++) {
+            System.out.print("  ");
+          }
+          for (int c = 1; c <= 2*r-1 ; c++) {
+            if (r==1 || r==height || c==1 || c==2*r-1) { 
+              System.out.print(c+"  ");
+            }
+            else {
+              System.out.print("    ");
+            }     
+          }         
+            // Moving to the next line after printing each row
+            System.out.println();
+        }        
+        scanner.close();
+    }
+}
+
+
+
+Task06--------------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the height of the isosceles triangle: ");
+        int height = scanner.nextInt();
+        
+
+        for (int r = 1; r <= 2*height -1; r++) {
+            // Printing numbers in each row
+          int space = 2*(height-r);
+          if (space<0) {
+            space = space * -1;
+          }
+          for (int s=1; s<=space; s++) {
+            System.out.print("  ");
+          }
+          int newR=r;
+          if (r>height) { 
+            newR = height - (r-height);
+          }
+          for (int c = 1; c <= 2*newR-1 ; c++) {
+            System.out.print(c+"  ");
+          }
+            
+            // Moving to the next line after printing each row
+            System.out.println();
+        }        
+        scanner.close();
+    }
+}
+
+
+
+
+Alter (Easy) Task06------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the height of the isosceles triangle: ");
+        int height = scanner.nextInt();
+        
+
+        for (int r = 1; r <= 2*height -1; r++) {
+          
+            // Printing numbers in each row
+          int newR=r;
+          if (r>height) { 
+            newR = height - (r-height);
+          }
+          for (int s=1; s<=((2*height)-(2*newR)) ; s++) {
+            System.out.print("  ");
+          }
+          
+          for (int c = 1; c <= 2*newR-1 ; c++) {
+            System.out.print(c+"  ");
+          }         
+            // Moving to the next line after printing each row
+            System.out.println();
+        }        
+        scanner.close();
+    }
+}
+
+
+Task07---------------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter the height of the isosceles triangle: ");
+        int height = scanner.nextInt();
+        
+
+        for (int r = 1; r <= 2*height -1; r++) {
+          
+            // Printing numbers in each row
+          int newR=r;
+          if (r>height) { 
+            newR = height - (r-height);
+          }
+          for (int s=1; s<=((2*height)-(2*newR)) ; s++) {
+            System.out.print("  ");
+          }
+          
+          for (int c = 1; c <= 2*newR-1 ; c++) {
+            if (c==1 || c==2*newR-1) {
+              System.out.print(c+"  ");
+            }
+            else {
+              System.out.print("    ");
+            }
+          }  
+            // Moving to the next line after printing each row
+            System.out.println();
+        }        
+        scanner.close();
+    }
+}

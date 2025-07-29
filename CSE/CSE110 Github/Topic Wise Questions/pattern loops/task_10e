@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class pattern4_7e {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        for(int rc=1;rc<=row;rc++){
+            System.out.print(" ");
+            if(rc==1 || rc==row){
+                for(int cc=1; cc<=row;cc++){
+                    System.out.print("# ");
+                }
+            }
+            if(rc>1 && rc<row){
+                System.out.print("#");
+                for(int sC=3;sC<=(row*2)-1;sC++){
+                    System.out.print(" ");
+                }
+                System.out.print("#");
+            }
+            System.out.println();
+        }
+    }
+}
+
+/* jodi first e space dite na chao
+
+for(int rc=1;rc<=row;rc++){
+            if(rc==1 || rc==row){
+                for(int cc=1; cc<=row;cc++){
+                    System.out.print("# ");
+                }
+            }
+            if(rc>1 && rc<row){
+                System.out.print("#");
+                for(int sC=2;sC<(row*2)-1;sC++){
+                    System.out.print(" ");
+                }
+                System.out.print("#");
+            }
+            System.out.println();
+        }
+
+ */

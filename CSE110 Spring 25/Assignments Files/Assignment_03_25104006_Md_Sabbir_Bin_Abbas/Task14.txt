@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Task14 {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter an integer: ");
+        int numReverse = sc.nextInt();
+        while (numReverse > 0) {
+        System.out.print(numReverse % 10 + " ");
+        numReverse /= 10;
+        }
+        System.out.println();
+    }
+}

@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Task6 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int x = input.nextInt();
+        int result;
+        if (x<0){
+            result =x*2;
+        } else if (x >=0&&x<=3){
+            result =x+1;
+        } else {
+            result =x*x+3;
+        }
+        System.out.println("Output: "+result);
+    }
+}

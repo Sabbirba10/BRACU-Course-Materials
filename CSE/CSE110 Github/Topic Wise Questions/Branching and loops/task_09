@@ -1,0 +1,25 @@
+public class task9 {
+    public static void main(String[] args) {
+        double num1 = 18.83;
+        double num2 = -4.02;
+        double num3 = 83.12;
+        double max = num1; 
+        double min = num1;
+
+        if (num2 > max) {
+            max = num2; 
+        }
+        if (num3 > max) {
+            max = num3; 
+        }
+
+        if (num2 < min) {
+            min = num2; 
+        }
+        if (num3 < min) {
+            min = num3; 
+        }
+        System.out.println("Maximum number is " + max);
+        System.out.println("Minimum number is " + min);
+    }
+}

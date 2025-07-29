@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class pattern4_4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("For how many students do you have scores? ");
+        int student = sc.nextInt();
+        System.out.print("How many test scores does each student have? ");
+        int score = sc.nextInt();
+
+        for (int j = 1; j <= student; j++) {
+            double total = 0;                      // Initialize total for each student
+            for (int i = 1; i <= score; i++) {
+                System.out.print("Enter score " + i + " for student " + j + ": ");
+                int enter = sc.nextInt();
+                total += enter;                                 // Accumulate the scores
+            }
+            double average =  total / score;
+            System.out.printf("The average score for student %d is %.1f\n", j, average);
+        }
+    }
+}
+
+
+// int enter jodi kono condition er moddhe thake ota compile error dekhabe cuz what if oi condiiton e na dukhe
+
+/*             System.out.printf("The average score for student %d is %.1f\n", j, average);
+ekhane ei line er meaning hoitase %d will be replaced by j and %.1f will be replaced by average
+.1 represents the dp
+ */
+
+
+/*
+int j=1;
+        double average= 55.75454544545455445;
+            System.out.printf("hello nigger %d tumi ki jano amar average %.1f\n", j, average);
+
+            etar output hoibo
+                hello nigger 1 tumi ki jano amar average 55.8
+
+ */

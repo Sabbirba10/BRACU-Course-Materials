@@ -1,0 +1,14 @@
+public class task1{
+    public static void main(String[] args) {
+        int start = 18;
+        int increment = 9; 
+        int count = 6;
+        int end =63;
+
+        for (int i = 0; i < count-1; i++) {
+            System.out.print(start + (i * increment)); 
+                System.out.print(", ");
+            }
+           System.out.println(end);
+        }
+    }

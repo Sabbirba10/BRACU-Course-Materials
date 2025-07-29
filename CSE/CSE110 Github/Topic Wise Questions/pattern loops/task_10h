@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class pattern4_7h {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        int rcmax= (row * 2)-1;
+        for (int rc = 1; rc <= rcmax; rc++) {
+            if (rc == 1 || rc == rcmax) {
+                for (int cc = 1; cc <= row; cc++) {
+                    System.out.print("# ");
+                }
+            }
+            if (rc > 1 && rc < rcmax) {
+                if (rc % 2 != 0) {
+                    for (int sC = 1; sC < rc; sC++) {    //3 te 3rd ar 7s, 5 e 5th ar 3s  only till rc=row
+                        System.out.print(" ");
+                    }
+                    System.out.print("#");
+
+
+                    for (int sC = 1; sC <= rcmax-rc; sC++) {  //after r>row 9th e 3s, 11th e 7s
+                        System.out.print(" ");
+                    }
+                    System.out.print("#");
+
+                }
+            }
+            System.out.println();
+        }
+    }
+}

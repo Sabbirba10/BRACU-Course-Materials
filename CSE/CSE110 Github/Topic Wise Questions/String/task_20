@@ -1,0 +1,14 @@
+public class task22_prev {
+    public static void main(String[] args) {
+        String s1 = "hello";
+        String s2 = "";
+
+        for (int rc = 0; rc < s1.length(); rc++) {
+            for (int cc = 0; cc <= rc; cc++) {
+                s2 += s1.charAt(cc);
+            }
+            System.out.println(s2);  // Print the current string
+            s2 = "";  // Reset s2 for the next line's pattern
+        }
+    }
+}

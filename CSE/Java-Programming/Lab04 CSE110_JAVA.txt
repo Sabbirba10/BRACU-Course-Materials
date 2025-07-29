@@ -1,0 +1,303 @@
+
+
+
+Homework#####################################################################
+
+
+
+
+Task01-----------------------------------------------------------------
+
+
+import java.util.Scanner;
+public class Lab04 {
+  public static void main(String[] args) { 
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Input number of terms: ");
+    int num = scanner.nextInt();
+    int n= num;
+    int sum=0;
+    for (int i=1; num>=1; i=i+2) {
+      System.out.println(i);
+      sum +=i;
+      num--;
+    }
+    System.out.println("The Sum of odd Natural Numbers up to " + n+ " terms is: " + sum);
+ 
+  /* ADD YOUR CODE HERE */
+    }
+}
+
+
+
+
+Task02------------------------------------------------------------------
+
+
+
+
+import java.util.Scanner;
+
+public class Lab04 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int sum = 0;
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Enter Number " +i+": ");
+            int number = scanner.nextInt();
+            sum += number;
+            System.out.println("Sum = " + sum);
+        }
+    }
+}
+
+
+
+
+
+Task03-------------------------------------------------------------------
+
+
+
+
+import java.util.Scanner;
+public class Lab04 {
+  public static void main(String[] args) { 
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Input number of terms: ");
+    int num = scanner.nextInt();
+    int sum=0;
+    for (int i=0; i<=num; i++) {
+      if (i%5==0 && i%3!=0) {
+        System.out.println(i);
+      }
+    }
+    
+ 
+  /* ADD YOUR CODE HERE */
+    }
+}
+
+
+
+
+Task04---------------------------------------------------------
+
+
+
+
+import java.util.Scanner;
+public class Lab04 {
+  public static void main(String[] args) { 
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Input number of terms: ");
+    int num = scanner.nextInt();
+    int count=0;
+    for (int i=0; num>0; i++) {
+      num=num/10;
+      //System.out.println("num = "+num);
+      count +=1;
+      //System.out.println("c = "+count);
+      
+    }
+    System.out.println("Total digits = "+count);
+ 
+  /* ADD YOUR CODE HERE */
+    }
+}
+
+
+
+
+Alter Task04@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+import java.util.Scanner;
+public class Lab04 {
+  public static void main(String[] args) { 
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Input number of terms: ");
+    int num = scanner.nextInt();
+    int count=0;
+    while (num != 0) {
+      num = num / 10;
+      count++;
+    }
+
+    System.out.println("Total digits = "+count);
+ 
+  /* ADD YOUR CODE HERE */
+    }
+}
+
+
+
+
+Task05--------------------------------------------------------
+
+
+import java.util.Scanner;
+public class Lab04 {
+  public static void main(String[] args) { 
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Input number of terms: ");
+    int num = scanner.nextInt();
+    int count=0;
+    int temp=num;
+    
+    while (num != 0) {
+      num = num / 10;
+      count++;
+    }
+    int divisor = (int) Math.pow(10,count-1);
+    //System.out.println("Total digits = "+count);
+    //System.out.println("divisor = "+divisor);
+    
+    for (int i=0; temp>0; i++){
+
+      int digit = temp/divisor;
+      System.out.print(digit);
+      temp %= divisor;
+      if (temp!=0){
+        System.out.print(", ");
+      }
+      divisor= divisor/10;
+    
+    } 
+  /* ADD YOUR CODE HERE */
+    }
+}
+
+
+
+
+Alter Task05@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+import java.util.Scanner;
+public class Lab04 {
+  public static void main(String[] args) { 
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Input number of terms: ");
+    int num = scanner.nextInt();
+    int count=0;
+    int temp=num;
+    
+    while (num != 0) {
+      num = num / 10;
+      count++;
+    }
+    //System.out.println("Total digits = "+count);
+    //System.out.println("divisor = "+divisor);
+    
+    for (int i = count - 1; i >= 0; i--){
+      int divisor = (int) Math.pow(10, i);
+      int digit = temp/divisor;
+      System.out.print(digit);
+      temp %= divisor;
+      if (temp!=0){
+        System.out.print(", ");
+      }
+    
+    } 
+  /* ADD YOUR CODE HERE */
+    }
+}
+
+
+
+
+Alter Task05---------------------------------------------------------------------
+
+
+import java.util.Scanner;
+public class Lab04 {
+  public static void main(String[] args) { 
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Input number of terms: ");
+    int num = scanner.nextInt();
+    int count=0;
+    int temp=num;
+    
+    while (num != 0) {
+      num = num / 10;
+      count++;
+    }
+    //System.out.println("Total digits = "+count);
+    //System.out.println("divisor = "+divisor);
+    int divisor = (int) Math.pow(10, count-1);
+    for (int i = 0; i<count; i++){
+      int digit = temp/divisor;
+      System.out.print(digit);
+      temp %= divisor;
+      if (temp!=0){
+        System.out.print(", ");
+      }
+      divisor= divisor/10;
+    
+    } 
+  /* ADD YOUR CODE HERE */
+    }
+}
+
+
+
+
+
+Task06------------------------------------------------------------
+(a)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+import java.util.Scanner;
+
+public class Lab04 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int temp = 0;
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        for (int i=2; i<number; i++) {
+          if (number%i==0) {
+            temp=1;
+            break;
+          }
+
+        }
+        if (temp==0) {
+          System.out.println(number+" is a prime number");
+        }
+        else {
+          System.out.println(number+" is not a prime number");
+        }
+    }
+}
+
+
+
+
+(b)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+import java.util.Scanner;
+
+public class Lab04 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        for (int i=1; i<number; i++) {
+          if (number%i==0){
+            sum +=i;
+          }
+        }
+        if (sum==number){
+          System.out.print(number+" is a perfect number");
+        }
+        else {
+          System.out.print(number+" is not a perfect number");
+        }
+    }

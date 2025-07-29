@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class pattern4_7f {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        for (int rc = 1; rc <= (row * 2)-1; rc++) {
+            if (rc == 1 || rc == (row * 2)-1) {
+                for (int cc = 1; cc <= row; cc++) {
+                    System.out.print("# ");
+                }
+            }
+            if (rc > 1 && rc < (row * 2)-1) {
+                if (rc % 2 != 0) {
+                    for (int sC = 1; sC < rc; sC++) {
+                        System.out.print(" ");
+                    }
+                    System.out.print("#");
+                }
+            }
+            System.out.println();
+        }
+    }
+}

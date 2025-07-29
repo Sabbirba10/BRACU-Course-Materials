@@ -1,0 +1,56 @@
+public class task11 {
+    public static void main(String[] args) {
+        String[] email_list = {"cse110@gmail.com", "government@.bd",  "eee@bracu.ac.b"};
+        int valid=0;
+        for (int i = 0; i < email_list.length; i++) {
+            String temp = email_list[i];
+            boolean at=false,first=false,end=false,dot=false,last=false,exist=false;
+            int at_index=-1,dot_index=-1;
+            char before=temp.charAt(0);
+            for (int j = 0; j < temp.length(); j++) {
+                char current = temp.charAt(j);
+                if (current=='@') {
+                    at_index=j;
+                    at=true;
+                }
+            }
+            if ((before>='a' && before<='z')||(before>='A'&&before<='Z')) {
+                first=true;
+            }
+
+            if(at){
+                if (at_index!=temp.length()-1) {
+                    exist = true;
+                }
+
+            }
+            if (exist) {
+                for (int j = at_index+1; j < temp.length(); j++) {
+                    char current = temp.charAt(j);
+                    if (current=='.') {
+                        dot=true;
+                        dot_index=j;
+                    }
+                }
+                char after = temp.charAt(at_index+1);
+                if ((after>='a' && after<='z')||(after>='A'&&after<='Z')) {
+                    end=true;
+                }
+                if (dot) {
+                    for (int j = dot_index+1; j < temp.length(); j++) {
+                        char current1=temp.charAt(j);
+                        if ((current1>='a' && current1<='z')||(current1>='A'&&current1<='Z')) {
+                            last=true;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (at&&first&&last&&end&&dot) {
+                valid++;
+            }
+
+        }
+        System.out.println(valid);
+    }
+}

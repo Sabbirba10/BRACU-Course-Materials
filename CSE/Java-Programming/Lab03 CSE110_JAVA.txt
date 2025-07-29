@@ -1,0 +1,124 @@
+Lab03 - CSE110_JAVA
+
+Classwork##############################################################################################
+
+
+task01-----------------------------------------------------------------------
+
+
+public class Lab3 {
+  public static void main(String[] args) { 
+    int a = 5;
+    int b = -8;
+    int c = 17;
+    if (a>b)   {
+      if (a>c)  {
+        System.out.print(a);
+      }
+      else {
+        System.out.print(c);
+      }       
+    }
+    else {
+      if (b>c) {
+        System.out.print(b);
+      }
+      else {
+        System.out.print(c);
+      }
+    }
+         
+  }
+  
+  /* ADD YOUR CODE HERE */
+}
+
+
+
+
+task02-----------------------------------------------------------------------
+
+
+public class Lab3 {
+  public static void main(String[] args) { 
+    int a = 70;
+    if (a>=90 && a<=100) {
+      System.out.print('A');
+    }
+    
+    else if (a>=85 && a<=89) {
+      System.out.print("A-");
+    }
+    
+    else if (a>=70 && a<=84) {
+      System.out.print("B");
+    }
+    else if (a>=57 && a<=69) {
+      System.out.print('C');
+    }
+    
+    else if (a>=50 && a<=56) {
+      System.out.print('D');
+    }
+    
+    else if (a<50) {
+      System.out.print('F');
+    }
+   /* ADD YOUR CODE HERE */
+  }
+  
+}
+
+
+
+task03-----------------------------------------------------------------------
+
+
+import java.util.Scanner;
+public class Lab3 {
+  public static void main(String[] args) { 
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter a year: ");
+    int a = scanner.nextInt();
+    
+    if ((a%4==0 && a%100!=0) || (a%400==0)){
+      System.out.print(a+" is a leap year");
+    }    
+    else  {
+      System.out.print(a+" is not a leap year");
+    }
+    
+   /* ADD YOUR CODE HERE */
+  }  
+}
+
+
+
+
+task04-----------------------------------------------------------------------
+
+
+import java.util.Scanner;
+public class Lab3 {
+  public static void main(String[] args) { 
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter the length of the first side of the triangle: ");
+    int a = scanner.nextInt();
+    System.out.print("Enter the length of the second side of the triangle: ");
+    int b = scanner.nextInt();
+    System.out.print("Enter the length of the third side of the triangle: ");
+    int c = scanner.nextInt();
+    
+    if (a==b && b==c){
+      System.out.print("This is a Equilateral triangle");
+    }    
+    else  if (a==b || b==c || a==c){
+      System.out.print("This is a Isosceles triangler");
+    }
+    else {
+      System.out.print("This is a Scalene triangle ");
+    }
+    
+   /* ADD YOUR CODE HERE */
+  }  
+}

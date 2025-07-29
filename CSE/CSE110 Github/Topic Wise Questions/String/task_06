@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+public class task6 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s1 = sc.nextLine();
+    String input = "";
+    String reverse = "";
+    for (int i = 0; i < s1.length(); i++) {
+      if (s1.charAt(i) == ' ') {
+        reverse = input + " " + reverse;
+        input = "";
+      } else {
+        input = input + s1.charAt(i);
+      }
+      if (i == s1.length() - 1) {
+        reverse = input + " " + reverse;
+      }
+    }
+    System.out.print(reverse);
+  }
+}
+

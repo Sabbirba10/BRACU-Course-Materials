@@ -1,0 +1,94 @@
+// Lab 1
+import java.util.Scanner;
+
+public class Lab1 {
+  public static void main (String [] args) {
+    
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter number 1: ");
+    int num1 = sc.nextInt();
+    
+    System.out.print("Enter a number 2: ");
+    int num2 = sc.nextInt();
+    
+    System.out.print("Enter a number 3: ");
+    int num3 = sc.nextInt();
+    
+    if ( num1 > num2 && num1 > num3 ){
+      System.out.println("largest number: "+ num1);
+    }
+    else if ( num2 > num1 && num2 > num3 ) {
+      System.out.println("largest number: "+ num2);
+    }
+     else if ( num3 > num1 && num3 > num2 ) {
+      System.out.println("largest number: "+ num3);
+    }
+      else {
+      System.out.println("no largest number");
+    }
+  }
+}
+    
+    
+
+// Lab 2
+import java.util.Scanner;
+
+public class Lab2 {
+  public static void main (String [] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter score: ");
+    int score = sc.nextInt();
+    
+   // if ( score )
+  }
+}
+
+// Lab 3 
+
+import java.util.Scanner;
+
+public class Lab3 {
+  public static void main (String [] args) {
+    
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter a number: ");
+    int num = sc.nextInt();
+    
+    if (( num % 5 == 0) && ( num % 7 == 0 )) {
+      System.out.println("Divisisible by Both");
+    }
+    else if (( num % 5 == 0)) {
+      System.out.println("Divisible by 5 only");
+    }
+    else if (( num % 7 == 0)) {
+      System.out.println("Divisisible by 7 only");
+    }
+    else {
+      System.out.println("No");
+    }
+  }
+}
+
+// lab 4 
+
+import java.util.Scanner;
+
+public class Lab4 {
+  public static void main (String [] args) {
+    
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter a year: ");
+    int year = sc.nextInt();
+    
+    if (( year % 4 == 0) && (year % 100 !=0) || (year % 400==0)) {
+      System.out.println(year +" is a leap year");
+    }
+    else {
+      System.out.println(year +" is not a leap year");
+    }
+  }
+}
+    
+// Lab 5
+

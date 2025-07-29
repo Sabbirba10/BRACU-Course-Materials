@@ -1,0 +1,23 @@
+public class week5C2
+{
+  public static void main(String[]args)
+  {
+    //for(initialization; condition; step)
+    for(int i=0;i<5;i++){
+      System.out.println(i);
+    }
+    
+    
+    
+    System.out.println("Last line of the code");
+//    int count = 1;       // initialization
+//    while(count<=100){    // Condition
+//      if(count%4==0){
+//        System.out.println(count+" div by 4");  // Body.
+//      }else{
+//        System.out.println(count+" Jani na");
+//      }
+//      count += 1;                           //steps
+//    }
+  }
+}

@@ -1,0 +1,384 @@
+Lab02 - CSE110_JAVA
+Spring-2024
+
+
+
+ClassWork:#######################################################################################################
+
+
+
+task:03---------------------------------------------------------
+
+
+
+i) 
+
+
+public class SwapUsingThirdVariable {
+    public static void main(String[] args) {
+        int a = 10; // Initialize first variable
+        int b = 5;  // Initialize second variable
+
+        System.out.println("Before swapping: a = " + a + ", b = " + b);
+
+        // Swap using a third variable
+        int temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After swapping: a = " + a + ", b = " + b);
+    }
+}
+
+
+
+
+
+ii)
+
+
+public class SwapWithoutThirdVariable {
+    public static void main(String[] args) {
+        int a = 10; // Initialize first variable
+        int b = 5;  // Initialize second variable
+
+        System.out.println("Before swapping: a = " + a + ", b = " + b);
+
+        // Swap without using a third variable
+        a = a + b; // a now becomes 15 (10 + 5)
+        b = a - b; // b now becomes 10 (15 - 5)
+        a = a - b; // a now becomes 5 (15 - 10)
+
+        System.out.println("After swapping: a = " + a + ", b = " + b);
+    }
+}
+
+
+
+
+task:05---------------------------------------------------------
+
+
+
+
+/**
+ * Auto Generated Java Class.
+ */
+import java.util.Scanner; 
+public class Lab1 {
+  public static void main(String[] args) { 
+        double a = 4.5;
+        double b = 9.5;
+        // Calculate the length of the third side (c) using the Pythagorean theorem
+        double c = Math.sqrt((a * a) + (b * b));
+        System.out.println("c: "+c);
+        // Calculate the sine and cosine values of angle A
+        double sinA = a / c;
+        double cosA = b / c;
+        // Calculate the sine and cosine values of angle B
+        double sinB = b / c;
+        double cosB = a / c;
+        
+        // Print the results
+        System.out.println("Sine of angle A (SinA): " + sinA);
+        System.out.println("Cosine of angle A (CosA): " + cosA);
+        System.out.println("Sine of angle B (SinB): " + sinB);
+        System.out.println("Cosine of angle B (CosB): " + cosB);
+  }
+  /* ADD YOUR CODE HERE */
+}
+
+Class Evaluation:#######################################################################################################
+
+
+task:01---------------------------------------------------------
+
+/**
+ * Auto Generated Java Class.
+ */
+import java.util.Scanner; 
+public class Lab1 {
+  
+  
+  public static void main(String[] args) { 
+    int a = 2;
+    int b = 5;
+    int c = 8;
+    int d = ( (2*b) * ((c-a)/3) ) + 7;
+      System.out.println("Answer: "+d);
+  }
+  
+  /* ADD YOUR CODE HERE */
+}
+
+
+
+task:02---------------------------------------------------------
+
+
+/**
+ * Auto Generated Java Class.
+ */
+import java.util.Scanner; 
+public class Lab1 {
+  
+  
+  public static void main(String[] args) { 
+    int id = 20301238;
+    int last_two = id % 100;
+    System.out.println(last_two%10+"\n"+last_two/10);
+
+  }
+  
+  /* ADD YOUR CODE HERE */
+}
+
+
+
+
+
+Homework:#######################################################################################################
+
+task:01---------------------------------------------------------
+
+/**
+ * Auto Generated Java Class.
+ */
+import java.util.Scanner; 
+public class Lab1 {
+  
+  
+  public static void main(String[] args) { 
+    System.out.println("Hello World!");
+    
+    Scanner sc = new Scanner (System.in); 
+    System.out.print("Enter an integer: ");
+    int num = sc.nextInt();
+     
+    num=num%100;
+    System.out.print("Output: ");
+    if (num==0) {
+      System.out.println("00");
+    }
+    else {
+      if (num<10){
+        System.out.print("0");
+        System.out.println(num);
+      }
+      else{
+        System.out.println(num);
+      }
+    }
+    
+  }
+  
+  /* ADD YOUR CODE HERE */
+}
+
+
+
+
+
+task:02---------------------------------------------------------
+
+
+
+/**
+ * Auto Generated Java Class.
+ */
+import java.util.Scanner; 
+public class Lab1 {
+  
+  
+  public static void main(String[] args) { 
+    System.out.println("Hello World!");
+    
+    Scanner sc = new Scanner (System.in); 
+    System.out.print("Given a value for inch: ");
+    double num = sc.nextInt();
+    num= num* 0.0254;
+    String value= String.valueOf(num);    // Converting double to string
+    System.out.println("1000 inch is "+ value+ " meters");
+ 
+  }
+  
+  /* ADD YOUR CODE HERE */
+}
+
+
+
+
+
+
+task:03---------------------------------------------------------
+
+
+/**
+ * Auto Generated Java Class.
+ */
+import java.util.Scanner; 
+import java.lang.Math;
+public class Lab1 {
+  
+  
+  public static void main(String[] args) { 
+    System.out.println("Hello World!");
+    int radius = 4;
+    double circumference = 2 * Math.PI * radius;
+    double area = Math.PI * radius * radius;
+
+    System.out.println("For a circle with radius " + radius + " units:");
+    System.out.println("Circumference: " + circumference + " units");
+    System.out.println("Area: " + area + " square units");
+    
+
+  }
+  
+  /* ADD YOUR CODE HERE */
+  /* We can convert float to double but cannot do vice-versa */
+}
+
+
+task3 ALTERNATIVE using float
+
+
+/**
+ * Auto Generated Java Class.
+ */
+
+import java.util.Scanner; 
+public class test3 {
+  
+  
+  public static void main(String[] args) { 
+    float radius = 4f;
+    float circumference = 2 * (float) Math.PI * radius;
+    float area = (float) Math.PI * radius * radius;
+    System.out.println("Radius: " + radius);
+    System.out.println("Circumference: " + circumference);
+    System.out.println("Area: " + area);
+    
+    }
+    
+  }
+
+
+task:04---------------------------------------------------------
+
+
+
+/**
+ * Auto Generated Java Class.
+ */
+import java.util.Scanner; 
+public class Lab1 {
+  
+  
+  public static void main(String[] args) { 
+    System.out.println("Hello World!");
+    int n=5;
+    System.out.println(n+" X 1 = "+n);
+    System.out.println(n+" X 1 = "+(n*2));
+    System.out.println(n+" X 1 = "+(n*3));
+    System.out.println(n+" X 1 = "+(n*4));
+    System.out.println(n+" X 1 = "+(n*5));
+    System.out.println(n+" X 1 = "+(n*6));
+    System.out.println(n+" X 1 = "+(n*7));
+    System.out.println(n+" X 1 = "+(n*8));
+    System.out.println(n+" X 1 = "+(n*9));
+    System.out.println(n+" X 1 = "+(n*10));
+
+
+  }
+  
+  /* ADD YOUR CODE HERE */
+}
+
+
+
+
+
+task:06---------------------------------------------------------
+
+
+/**
+ * Auto Generated Java Class.
+ */
+import java.util.Scanner; 
+public class Lab1 {
+  
+  
+  public static void main(String[] args) { 
+    System.out.println("Hello World!");
+    Scanner sc = new Scanner (System.in); 
+    System.out.print("Enter the number of terms 'n': ");
+    int n = sc.nextInt();
+    System.out.print("Enter the first term 'a': ");
+    int a= sc.nextInt();
+    System.out.print("Enter the last term 'L': ");
+    int L = sc.nextInt();
+    float S = (n/2) *(a + L);
+    System.out.println("Output: "+S);
+  }
+  
+  /* ADD YOUR CODE HERE */
+}
+
+
+
+
+
+task:07---------------------------------------------------------
+
+
+/**
+ * Auto Generated Java Class.
+ */
+import java.util.Scanner; 
+public class Lab1 {
+  
+  
+  public static void main(String[] args) { 
+    double hour = 5d;
+    double minute = 56d;
+    double seconds = 23d;
+    double distance_meters = 1230d;
+    double distance_km = distance_meters/1000;
+    double distance_mile = distance_meters * (1.0/1609.0);
+    hour = hour + (minute / 60) + (seconds /(60 * 60));
+
+    double velocity_km_hour = distance_km / hour;
+    double velocity_mile_hour = distance_mile / hour;
+    System.out.println("Velocity KMPH: "+velocity_km_hour+"\nVelocity MPH: "+velocity_mile_hour);
+
+
+  }
+  
+  /* ADD YOUR CODE HERE */
+}
+
+
+
+task:08---------------------------------------------------------
+
+
+/**
+ * Auto Generated Java Class.
+ */
+import java.util.Scanner; 
+public class Lab1 {
+  
+  
+  public static void main(String[] args) { 
+    double a = 8d;
+    double b = 3d;
+    //We know, c= root(a^2 * b^2)
+    double c = Math.sqrt(Math.pow(a/2,2) + Math.pow(b,2));  // c is the length of a side
+    System.out.println(c);
+    double area = (3*Math.sqrt(3)*(c*c))/2;
+    double circumference = 6 * c;
+    System.out.println("Area: "+area+" and Circumference: "+circumference);
+  }
+  
+  /* ADD YOUR CODE HERE */
+}

@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class no1{
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number of inputs:");
+    int num = sc.nextInt();
+    int max = -99999999;
+    int min = 99999999;
+    int sum = 0;
+    int count = 0;
+    for (int i = 0; i < num; i++) {
+      System.out.println("Enter number " + (i + 1) + ":");
+      int a = sc.nextInt();
+      if (a % 2 == 0 && a > 0) {
+        if (a > max) {
+          max = a;
+        }
+        if (a < min) {
+          min = a;
+        }
+        sum += a;
+        count++;
+      }
+    }
+    if (count > 0) {
+      double avg = (double) sum / count;
+      System.out.println("Max: " + max);
+      System.out.println("Min: " + min);
+      System.out.println("Average: " + avg);
+    } else {
+      System.out.println("No even positive numbers were entered. Average: 0");
+    }
+  }
+}

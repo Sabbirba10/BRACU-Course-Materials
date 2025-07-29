@@ -1,0 +1,12 @@
+public class task13 {
+    public static void main(String[] args) {
+      int start = 24;
+      int end = -6;
+        for (int i = start; i > end; i -= 6) {
+            System.out.print(i + ",");
+        }
+        System.out.println(end);
+
+        }
+    }
+

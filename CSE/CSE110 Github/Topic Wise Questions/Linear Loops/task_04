@@ -1,0 +1,15 @@
+public class task4{
+    public static void main(String[] args) {
+        int end = 600;
+        int sum = 0;
+
+      
+        for (int i = 1; i <= end; i++) {
+            if (i % 7 == 0 || i % 9 == 0) {
+                sum += i; 
+            }
+        }
+        
+        System.out.println("The sum of all numbers that are multiples of either 7 or 9 up to 600 is: " + sum);
+    }
+}

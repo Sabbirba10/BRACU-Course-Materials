@@ -1,0 +1,436 @@
+//
+//
+//
+//
+//--TASK--01------------------------------
+public class Student {
+  
+  public String name;
+  public String prog;
+  
+  public Student (String a, String b) {
+    this.name = a;
+    this.prog = b;}
+  
+  public void updateName (String a) {
+    this.name = a;}
+  
+  public void updateProgram (String a) {
+    this.prog = a;}
+  
+  public String accessProgram () {
+    return this.prog;}
+  
+}
+//
+//
+//
+//
+//--TASK--02------------------------------
+public class Toy {
+  
+  public String name;
+  public int price;
+  
+  public Toy (String a, int b) {
+    this.name = a;
+    this.price = b;
+    System.out.println("A new toy has been made!");}
+  
+  public void updatePrice (int a) {
+    this.price = a;}
+  
+  public void showPrice () {
+    System.out.println("Price: "+this.price+" Taka");}
+  
+  public void updateName (String a) {
+    System.out.println("Changing old name: "+this.name);
+    this.name = a;
+    System.out.println("new name: "+this.name);}
+  
+}
+//
+//
+//
+//
+//--TASK--03------------------------------
+public class Shape2D {
+  
+  public String check;
+  public int length;
+  public int breadth;
+  public int height;
+  public int base;
+  public int side1;
+  public int side2;
+  public int side3;
+  
+  public Shape2D () {
+    this.length = 5;
+    check = "sq";
+    System.out.println("A Square has been created with length: "+this.length);}
+  
+  public Shape2D (int a, int b) {
+    this.length = a;
+    this.breadth = b;
+    check = "rc";
+    System.out.println("A Rectangle has been created with length: "+this.length+" and breadth: "+this.breadth);}
+  
+  public Shape2D (int a, int b, String c) {
+    this.height = a;
+    this.base = b;
+    check = "tr1";
+    System.out.println("A Triangle has been created with height: "+this.height+" and base: "+this.base);}
+  
+   public Shape2D (int a, int b, int c) {
+    this.side1 = a;
+    this.side2 = b;
+    this.side3 = c;
+    check = "tr2";
+    System.out.println("A Triangle has been created with the following sides:"+this.side1+", "+this.side2+", "+this.side3);}
+  
+  public void area () {
+    if (this.check=="sq") {
+      double area = this.length*this.length;
+      System.out.println("The area of the Square is: "+area);}
+    if (this.check=="rc") {
+      double area = this.length*this.breadth;
+      System.out.println("The area of the Rectangle is: "+area);}
+    if (this.check=="tr1") {
+      double area = 0.5*this.height*this.base;
+      System.out.println("The area of the Rectangle is: "+area);}
+    if (this.check=="tr2") {
+      double s = (this.side1 + this.side2 + this.side3)/2;
+      double area = Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
+      System.out.println("The area of the Triangle is: "+area);}}
+}
+//
+//
+//
+//
+//--TASK--04------------------------------
+public class Student {
+  
+  public int id;
+  public double cgpa = -1;
+  public String [] courses;
+  public int count = 0;
+  public int limit;
+  
+  public Student (int a) {
+    this.id = a;
+    System.out.println("A student with ID "+this.id+" has been created. ");}
+
+  public Student (int a, double b) {
+    this.id = a;
+    this.cgpa = b;
+    if (cgpa<3) {
+      limit = 3;}
+    else {
+      limit = 4;}
+    courses = new String [limit];
+    System.out.println("A student with ID "+this.id+" and cgpa "+this.cgpa+" has been created.");}
+  
+  public void storeCG (double a) {
+    this.cgpa = a;
+    if (cgpa<3) {
+      limit = 3;}
+    else {
+      limit = 4;}
+    courses = new String [limit];}
+  
+  public void addCourse (String a) {
+    if (cgpa==-1) {
+      System.out.println("Failed to add "+a);
+      System.out.println("Set CG first");}
+    else if (count == limit) {
+      System.out.println("Failed to add "+a);
+      if (limit == 3) {
+        System.out.println("CG is low. Can't add more than 3 courses");}
+      else if (limit == 4) {
+        System.out.println("Maximum 4 courses allowed.");}}
+    else {
+      courses[count] = a;
+      count = count+1;}}
+  
+  public void addCourse (String [] p) {
+    for (int i = 0; i<p.length; i++) {
+      String a = p[i];
+      if (cgpa==-1) {
+        System.out.println("Failed to add "+a);
+        System.out.println("Set CG first");}
+      else if (count == limit) {
+        System.out.println("Failed to add "+a);
+        if (limit == 3) {
+          System.out.println("CG is low. Can't add more than 3 courses");}
+        else if (limit == 4) {
+          System.out.println("Maximum 4 courses allowed.");}}
+      else {
+        courses[count] = a;
+        count = count+1;}}}
+  
+  public void showAdvisee () {
+    System.out.println("Student ID: "+id+", CGPA: "+cgpa);
+    if (count == 0) {
+      System.out.println("No courses added.");}
+    else {
+      System.out.println("Added courses are: ");
+      for (int i = 0; i<count; i++) {
+        System.out.print(courses[i]+" ");}
+      System.out.println();}}
+  
+  public void removeAllCourse () {
+    count = 0;}
+  
+  public void storeID (int a) {
+    this.id = a;}
+}
+//
+//
+//
+//
+//--TASK--05------------------------------
+public class Triangle {
+  
+  public int t1;
+  public int t2;
+  public int t3;
+  
+  public Triangle (int a, int b, int c) {
+    this.t1 = a;
+    this.t2 = b;
+    this.t3 = c;}
+  
+  public void triangleDetails () {
+    System.out.println("Three sides of the triangle are: "+t1+", "+t2+", "+t3);
+    System.out.println("Perimeter: "+(t1+t2+t3));}
+  
+  public String printTriangleType () {
+    if (t1==t2 && t2==t3) {
+      return "This is an Equilateral Triangle.";}
+    if (t1==t2 || t2==t3 || t3==t1) {
+      return "This is an Isosceles Triangle.";}
+    else {
+      return "This is an Scalene Triangle.";}}
+  
+  public void compareTrinagles (Triangle a) {
+    if (this == a) {
+      System.out.println("These two triangle objects have the same address.");}
+    else {
+      if (this.t1 == a.t1 && this.t2 == a.t2 && this.t3 == a.t3) {
+        System.out.println("Addresses are different but the sides of the triangles are equal.");}
+      else if ((this.t1+this.t2+this.t3)==(a.t1+a.t2+a.t3)) {
+        System.out.println("Only the perimeter of both triangles is equal.");}
+      else {
+        System.out.println("Addresses, length of the sides and perimeter all are different. ");}}}
+}
+//
+//
+//
+//
+//--TASK--06--Teacher----------------------------
+public class Teacher {
+  public String name;
+  public String initial;
+  public String [] courses = new String [3];
+  public int count = 0;
+  
+  public Teacher (String a, String b) {
+    name = a;
+    initial = b;
+    System.out.println("A new teacher has been created ");}
+  
+  public void addCourse (Course a) {
+    if (count < 3) {
+      this.courses [this.count] = a.name;
+      this.count = this.count + 1;}}
+  
+  public void printDetail () {
+    System.out.println("Name: "+name);
+    System.out.println("Initial: "+initial);
+    System.out.println("List of courses:");
+    for(int i = 0; i<count; i++) {
+      System.out.println(courses[i]);}}
+}
+//
+//
+//
+//
+//--TASK--06--Course----------------------------
+public class Course {
+  public String name;
+  
+  public Course (String a) {
+    name = a;}
+}
+//
+//
+//
+//
+//--TASK--07--BracuStudent----------------------------
+public class BracuStudent {
+  
+  public String name;
+  public String dest;
+  public boolean pass = false;
+  
+  public BracuStudent (String a, String b) {
+    this.name = a;
+    this.dest = b;}
+  
+  public void getPass () {
+    this.pass = true;}
+  
+  public void updateHome (String a) {
+    this.dest = a;}
+  
+  public void showDetails () {
+    System.out.println("Student Name: "+this.name);
+    System.out.println("Lives in "+this.dest);
+    System.out.println("Have Bus Pass? "+this.pass);}
+}
+//
+//
+//
+//
+//--TASK--07--BracuBus----------------------------
+public class BracuBus {
+  
+  public String route;
+  public int count = 0;
+  public int limit;
+  public String [] psn;
+  public boolean pass = false;
+  
+  public BracuBus (String a, int b) {
+    this.route = a;
+    this.limit = b;
+    psn = new String [limit];}
+  
+  public BracuBus (String a) {
+    this.route = a;
+    this.limit = 2;
+    psn = new String [limit];}
+  
+  public void showDetails () {
+    System.out.println("Bus Route: "+route);
+    System.out.println("Passenger Count: "+count+" (Max: "+limit+")");
+    System.out.println("Passengers on Board:");
+    for(int i = 0; i<count; i++) {
+      System.out.print(psn[i]+" ");}
+    System.out.println();}
+  
+  public void board () {
+    System.out.println("No passengers");}
+  
+  public void board (BracuStudent a, BracuStudent b) {
+    if (a.pass == false) {
+      System.out.println("You don't have a bus pass!");}
+    else if (a.dest != this.route) {
+      System.out.println("You got on the wrong bus!");}
+    else if (this.count == this.limit) {
+      System.out.println("Bus is full!");}
+    else {
+      this.psn[count] = a.name;
+      this.count = this.count + 1;
+      System.out.println(a.name+" boarded the bus.");}
+    
+    if (b.pass == false) {
+      System.out.println("You don't have a bus pass!");}
+    else if (b.dest != this.route) {
+      System.out.println("You got on the wrong bus!");}
+    else if (this.count == this.limit) {
+      System.out.println("Bus is full!");}
+    else {
+      this.psn[count] = b.name;
+      this.count = this.count + 1;
+      System.out.println(b.name+" boarded the bus.");}}
+  
+  public void board (BracuStudent a) {
+    if (a.pass == false) {
+      System.out.println("You don't have a bus pass!");}
+    else if (a.dest != this.route) {
+      System.out.println("You got on the wrong bus!");}
+    else if (this.count == this.limit) {
+      System.out.println("Bus is full!");}
+    else {
+      this.psn[count] = a.name;
+      this.count = this.count + 1;
+      System.out.println(a.name+" boarded the bus.");}}
+    
+}
+//
+//
+//
+//
+//--TASK--08--Student----------------------------
+public class Student {
+  
+  public String name;
+  public int id;
+  public String dept;
+  public String [] courses = new String [3];
+  public String email;
+  public String password;
+  public boolean log = false;
+  
+  public Student (String a, int b, String c) {
+    this.name = a;
+    this.id = b;
+    this.dept = c;
+    System.out.println("Student object is created");}
+}
+//
+//
+//
+//
+//--TASK--08--Usis----------------------------
+public class Usis {
+  
+  public int totalAdvisee = 0;
+  public Student [] list = new Student [5];
+  
+  public Usis () {
+    System.out.println("Usis is ready to use!");}
+  
+  public void login (Student a) {
+    if (a.email == null) {
+      System.out.println("Email and password need to be set.");}
+    else {
+      a.log = true;
+      System.out.println("Login successful");}}
+  
+  public void advising (Student a) {
+    if (a.log == false) {
+      System.out.println("Please login to advise courses!");}
+    else {
+      System.out.println("You haven't selected any courses.");}}
+  
+  public void advising (Student a, String aa, String b, String c, String d) {
+    if (a.log == false) {
+      System.out.println("Please login to advise courses!");}
+    else {
+      System.out.println("You need special approval to take more than 3 courses.");}}
+    
+  public void advising (Student a, String aa, String b, String c) {
+    if (a.log == false) {
+      System.out.println("Please login to advise courses!");}
+    else {
+      a.courses [0] = aa;
+      a.courses [1] = b;
+      a.courses [2] = c;
+      this.list [this.totalAdvisee] = a;
+      this.totalAdvisee = this.totalAdvisee + 1;
+      System.out.println("Advising successful!");}}
+  
+  public void allAdviseeInfo () {
+    System.out.println("Total Advisee: "+totalAdvisee);
+    for (int i = 0; i<totalAdvisee; i++) {
+      System.out.println("Name: "+ list[i].name + " ID: "+ list[i].id);
+      System.out.println("Department: "+ list[i].dept);
+      System.out.println("Advised Courses:");
+      for (int j = 0; j<3; j++) {
+        System.out.print(list[i].courses[j]+" ");}
+      System.out.println();
+      System.out.println("==============");}}
+}

@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class task14_prev {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the first string:");
+        String s1 = sc.nextLine();
+
+        System.out.println("Enter the second string:");
+        String s2 = sc.nextLine();
+
+        String result = "";
+
+        for (int i = 0; i < s1.length(); i++) {
+            char currentChar = s1.charAt(i);
+            char lowerCurrentChar;
+
+            // Convert to lowercase directly using (char) (currentChar + 32)
+            if (currentChar >= 'A' && currentChar <= 'Z') {
+                lowerCurrentChar = (char) (currentChar + 32);
+            } else {
+                lowerCurrentChar = currentChar;
+            }
+
+            boolean Duplicate = false;
+
+            // Check if lowerCurrentChar exists in s2
+            for (int j = 0; j < s2.length(); j++) {
+                char lowerS2Char;
+
+                if (s2.charAt(j) >= 'A' && s2.charAt(j) <= 'Z') {
+                    lowerS2Char = (char) (s2.charAt(j) + 32);
+                } else {
+                    lowerS2Char = s2.charAt(j);
+                }
+
+                if (lowerCurrentChar == lowerS2Char) {
+                    Duplicate = true;
+                    break;
+                }
+            }
+
+            // If lowerCurrentChar is not found in s2, add the original character to result
+            if (!Duplicate) {
+                result += currentChar;
+            }
+        }
+
+        System.out.println("Output: " + result);
+        sc.close();
+    }
+}

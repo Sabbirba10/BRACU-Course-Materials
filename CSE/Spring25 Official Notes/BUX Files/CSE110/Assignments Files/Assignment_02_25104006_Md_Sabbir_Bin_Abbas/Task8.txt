@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Task8 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int salary = input.nextInt();
+        int age = input.nextInt();
+        int tax = 0;
+        if (age >=18) {
+            if (salary>20000) {
+                tax = salary*10/100;
+            } else if (salary >=10000) {
+                tax = salary*5/100;
+            }
+        }
+        System.out.println("Your tax amounts to "+tax+" TK");
+    }
+}

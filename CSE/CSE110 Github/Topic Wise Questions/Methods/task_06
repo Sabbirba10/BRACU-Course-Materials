@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+public class task6 {
+    public static void main(String[] args)
+
+
+    {
+        Scanner sc = new Scanner(System.in);
+        double t = calcTax(20,18000);
+        System.out.printf("%.1f\n",t);
+        double sum = 0;
+
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+
+        for (int i = 1; i <= 12; i++) {
+            System.out.print("Enter tax for month " + i + ": ");
+            int monthTax = sc.nextInt();
+            double tax = calcYearlyTax(age, monthTax);
+            sum += tax;
+
+            if (tax == 0) {
+                System.out.printf("Month %d tax: 0\n", i);
+            } else {
+                System.out.printf("Month %d tax: %.1f\n", i, tax);
+            }
+        }
+
+        System.out.printf("Total Yearly Tax: %.1f\n", sum);
+        sc.close(); // Close Scanner
+    }
+
+    public static double calcYearlyTax(int age, int tax )
+
+    {
+        return calcTax(age, tax);
+    }
+
+
+
+
+
+
+
+
+
+    public static double calcTax(int age, int salary)
+
+
+
+    {
+        if (age < 18 || salary < 10000) {
+            return 0.0;
+        }
+        else if (salary >= 10000 && salary <= 20000) {
+            return 0.07*salary;
+        }
+        else {
+            return 0.14*salary;
+            /*
+            If neither of the else if conditions are met (although logically one should be),
+            Java expects a definitive return statement outside the current conditions
+             */
+        }
+    }
+
+}
+/*
+public static double calcTax(int age, int salary) {
+        if (age < 18 || salary < 10000) {
+            return 0.0;
+        }
+        if (salary <= 20000) {
+        return 0.07 * salary;
+    }                       // The remaining cases will be handled here
+    return 0.14 * salary;
+}
+ */

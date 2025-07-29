@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Task9 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        float num1 = input.nextFloat();
+        float num2 = input.nextFloat();
+        float num3 = input.nextFloat();
+        float max = Math.max(num1, Math.max(num2,num3));
+        float min = Math.min(num1, Math.min(num2,num3));
+        System.out.println("Maximum number is "+max);
+        System.out.println("Minimum number is "+min);
+    }
+}

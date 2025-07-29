@@ -1,0 +1,283 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 // Task 1\
+import java.util.Scanner;\
+\
+public class Question1 \{\
+    public static void main(String[] args) \{\
+        Scanner sc = new Scanner(System.in);\
+        \
+        System.out.println("Enter words: ");\
+        String words = sc.nextLine();\
+        String r = "";\
+\
+        for(int i = 0; i < words.length(); i++) \{\
+            char ch = words.charAt(i);\
+            if (ch >= 'a' && ch <= 'z') \{\
+                r += (char)(ch-32);\
+            \} else \{\
+                r += ch;\
+            \}\
+        \}\
+        System.out.println(r);\
+    \}\
+\}\
+\
+\
+// Task 2\
+import java.util.Scanner;\
+\
+public class Question2 \{\
+    public static void main(String[] args) \{\
+        Scanner sc = new Scanner(System.in);\
+        System.out.println("Enter words: ");\
+\
+        String words = sc.nextLine();\
+        String r = "";\
+\
+        for (int i = words.length() - 1; i >= 0; i--) \{\
+            r += words.charAt(i);\
+        \}\
+        System.out.println(r);\
+    \}\
+\}\
+\
+\
+// Task 3\
+import java.util.Scanner;\
+\
+public class Question3 \{\
+    public static void main(String[] args) \{\
+        Scanner sc = new Scanner(System.in);\
+        System.out.println("Enter words: ");\
+        String words = sc.nextLine();\
+\
+        String r = "";\
+        boolean pal = false;\
+\
+        for (int i = words.length() - 1; i >= 0; i--) \{\
+            r += words.charAt(i);\
+        \}\
+\
+        if (words.equals(r)) \{\
+            pal = true;\
+        \}\
+\
+        System.out.println(pal);\
+    \}\
+\}\
+\
+// Task 4\
+import java.util.Scanner;\
+\
+public class Question4 \{\
+    public static void main(String[] args) \{\
+        Scanner sc = new Scanner(System.in);\
+        System.out.println("Enter words: ");\
+        String words = sc.nextLine();\
+\
+        System.out.println("Enter split character: ");\
+        char spc = sc.next().charAt(0);\
+\
+        String cw = "";\
+        for (int i = 0; i < words.length(); i++) \{\
+            if (words.charAt(i) == spc) \{\
+                System.out.println(cw);\
+                cw = "";\
+            \} else \{\
+                cw += words.charAt(i);\
+            \}\
+        \}\
+        System.out.println(cw);\
+    \}\
+\}\
+\
+// Task 5\
+import java.util.Scanner;\
+\
+public class Question5 \{\
+    public static void main(String[] args) \{\
+        Scanner sc = new Scanner(System.in);\
+        System.out.println("Enter words: ");\
+        String words = sc.nextLine();\
+\
+        String[] words = words.split(" ");\
+        String r = "";\
+\
+        for (int i = words.length - 1; i >= 0; i--) \{\
+            r += words[i] + " ";\
+        \}\
+\
+        System.out.println(r.trim());\
+    \}\
+\}\
+\
+// Task 6\
+import java.util.Scanner;\
+\
+public class Question6 \{\
+    public static void main(String[] args) \{\
+        Scanner sc = new Scanner(System.in);\
+        System.out.println("Enter words: ");\
+        String words = sc.nextLine().toLowerCase();\
+\
+        int vc = 0;\
+        int cc = 0;\
+\
+        for (int i = 0; i < words.length(); i++) \{\
+            char ch = words.charAt(i);\
+            if (ch >= 'a' && ch <= 'z') \{\
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') \{\
+                    vc++;\
+                \} else \{\
+                    cc++;\
+                \}\
+            \}\
+        \}\
+\
+        if (vc > 0 && vc % 3 == 0 && cc > 0 && cc % 5 == 0) \{\
+            System.out.println("Aaarr! Me Plunder!!");\
+        \} else \{\
+            System.out.println("Blimey! No Plunder!!");\
+        \}\
+    \}\
+\}\
+\
+//Task 7\
+import java.util.Scanner;\
+\
+public class Question7 \{\
+    public static void main(String[] args) \{\
+        Scanner sc = new Scanner(System.in);\
+        System.out.println("Enter 1st lowercase: ");\
+        String s1 = sc.nextLine();\
+\
+        System.out.println("Enter 2nd lowercase: ");\
+        String s2 = sc.nextLine();\
+\
+        String r = "";\
+\
+        for (int i = 0; i < s1.length(); i++) \{\
+            char ch = s1.charAt(i);\
+            if (s2.indexOf(ch) == -1) \{\
+                r += ch;\
+            \}\
+        \}\
+\
+        for (int i = 0; i < s2.length(); i++) \{\
+            char ch = s2.charAt(i);\
+            if (s1.indexOf(ch) == -1) \{\
+                r += ch;\
+            \}\
+        \}\
+\
+        System.out.println(r.toUpperCase());\
+    \}\
+\}\
+\
+// Task 8\
+import java.util.Scanner;\
+\
+public class Question8 \{\
+    public static void main(String[] args) \{\
+        Scanner sc = new Scanner(System.in);\
+        System.out.println("Enter sentence: ");\
+        String sen = sc.nextLine();\
+        \
+        String r = "";\
+        boolean up = false;\
+\
+        for (int i = 0; i < sen.length(); i++) \{\
+            char ch = sen.charAt(i);\
+            if (Character.isLetter(ch)) \{\
+                if (up) \{\
+                    r += Character.toUpperCase(ch);\
+                \} else \{\
+                    r += Character.toLowerCase(ch);\
+                \}\
+                up = !up; \
+            \} else \{\
+                r += ch;\
+            \}\
+        \}\
+\
+        System.out.println(r);\
+    \}\
+\}\
+\
+// Task 9\
+import java.util.Scanner;\
+\
+public class Q9 \{\
+    public static void main(String[] args) \{\
+        Scanner sc = new Scanner(System.in);\
+        System.out.println("Enter password: ");\
+        String pass = sc.nextLine();\
+\
+        boolean upper = false;\
+        boolean lower = false;\
+        boolean d = false;\
+        boolean s = false;\
+\
+        if (pass.length() >= 8) \{\
+            for (int i = 0; i < pass.length(); i++) \{\
+                char ch = pass.charAt(i);\
+                if (Character.isUpperCase(ch)) \{\
+                    upper = true;\
+                \} else if (Character.isLowerCase(ch)) \{\
+                    lower = true;\
+                \} else if (Character.isDigit(ch)) \{\
+                    d = true;\
+                \} else if (!Character.isWhitespace(ch)) \{\
+                    s = true;\
+                \}\
+            \}\
+        \}\
+\
+        if (pass.length() >= 8 && upper && lower && d && s) \{\
+            System.out.println("True");\
+        \} else \{\
+            System.out.println("False");\
+        \}\
+    \}\
+\}\
+\
+// Task 10\
+import java.util.Scanner;\
+\
+public class Q10 \{\
+    public static void main(String[] args) \{\
+        Scanner sc = new Scanner(System.in);\
+        System.out.println("Enten name: ");\
+        String n = sc.nextLine();\
+        System.out.println("Enter pass: ");\
+        String p = sc.nextLine();\
+\
+        boolean v = true;\
+\
+        for (int i = 0; i <= p.length() - n.length(); i++) \{\
+            boolean m = true;\
+            for (int j = 0; j < n.length(); j++) \{\
+                if (n.charAt(j) != p.charAt(i + j)) \{\
+                    m = false;\
+                    break;\
+                \}\
+            \}\
+            if (m) \{\
+                v = false;\
+                break;\
+            \}\
+        \}\
+\
+        if (v) \{\
+            System.out.println("Valid");\
+        \} else \{\
+            System.out.println("Invalid");\
+        \}\
+    \}\
+\}}

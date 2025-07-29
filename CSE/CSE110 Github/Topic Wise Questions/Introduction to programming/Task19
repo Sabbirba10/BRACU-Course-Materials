@@ -1,0 +1,11 @@
+public class Task19{
+  public static void main (String[]args){
+    int a = 8;
+    int b = 3;
+    double c = Math.sqrt(Math.pow((a/2),2)+Math.pow(b,2));
+    double circumference = 6*c;
+    double area = ((3 * Math.sqrt(3))/ 2)* c *c;
+    System.out.println("Circumference= "+circumference);
+    System.out.printf("Area= %.2f\n",area );
+  }
+} 

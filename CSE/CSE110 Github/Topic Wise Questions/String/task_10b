@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class task11_prev {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a odd num string:");
+        String s1 = sc.nextLine();
+        if(s1.length()%2 ==0){
+            return;
+        }
+        int length = s1.length();
+        int mid = length / 2;
+
+        String firstHalf = "";
+        String secondHalf = "";
+        String upperCaseLetters = "";
+
+        for (int i = 0; i < (mid+1); i++) {
+            firstHalf += s1.charAt(i);
+        }
+        for (int i = (mid+1); i < length; i++) {
+            secondHalf += s1.charAt(i);
+        }
+
+        for (int i = 0; i < (mid+1); i++) {
+            if (s1.charAt(i) >= 'A' && s1.charAt(i) <= 'Z') {
+                upperCaseLetters += s1.charAt(i);
+            }
+        }
+
+        System.out.println("First half: " + firstHalf);
+        System.out.println("Second half: " + secondHalf);
+        System.out.println("Uppercase letters in first half: " + upperCaseLetters);
+        sc.close();
+    }
+}

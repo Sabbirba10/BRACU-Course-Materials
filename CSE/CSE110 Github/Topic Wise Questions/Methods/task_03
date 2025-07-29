@@ -1,0 +1,44 @@
+public class task3 {
+    public static void main(String []args)
+
+    {
+
+        boolean res=isTriangle(3,2,1);
+        System.out.println(res);
+
+
+
+        triArea(7,5,10);
+    }
+
+
+
+    public static boolean isTriangle(int x, int y, int z) {
+        if (((x+y)>z) && ((y+z)>x) && ((z+x)>y)) { //lekhar somoy bracket boro diyo
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public static void triArea (int x, int y, int z)
+    {
+     if(isTriangle(x,y,z))
+     {
+         int s= (x+y+z)/2;
+         double area= Math.sqrt(s*(s-x)*(s-y)*(s-z));
+         System.out.printf("%.3f\n",area);
+     }
+
+
+     else{
+
+         System.out.println("cant form triangle");
+
+     }
+
+
+    }
+}
+

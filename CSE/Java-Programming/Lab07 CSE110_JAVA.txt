@@ -1,0 +1,556 @@
+Classwork######################################################
+
+
+Task01------------------------------------------------
+
+
+
+import java.util.Scanner;
+
+public class Name{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter string password:");
+        String str = scanner.nextLine();
+        String result = "";
+
+        for (int i = 0; i < str.length() ; i++) {
+          char ch = str.charAt(i);
+          if ( (int) ch >=97 && (int) ch <= 122) {
+            result = result + (char) ( (int) ch -32);
+          }
+          else {
+            result = result + ch;
+          }
+
+        scanner.close();
+        }
+        System.out.print(result);
+
+    }
+}
+
+
+
+
+
+Task02------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter string password:");
+        String str = scanner.nextLine();
+        String result = "";
+
+        for (int i = str.length()-1; i >=0 ; i--) {
+          result += str.charAt(i);
+
+        scanner.close();
+        }
+        if (str.equals(result)) {
+          System.out.println("Palindrome");
+        }
+        else {
+          System.out.println("Not Palindrome");
+        }
+        
+    }
+}
+
+
+
+Alter-----------------------------------------------------
+
+
+class Main {
+    public static void main(String[] args) {
+        boolean result=true;
+        String word = "mamu";
+        for (int i=0; i<word.length()/2;i++){
+            int val = word.length()-1-i;
+            System.out.println(word.charAt(i)+"--->"+word.charAt(val));
+            if (word.charAt(i)!=word.charAt(val)){
+                result=false;
+                break;
+            }
+        }
+        if (result){
+            System.out.println("Palindrome");
+        }
+        else{
+            System.out.println("Not Palindrome");
+        }
+    }
+}
+
+
+
+Task03-------------------------------------------------
+
+
+
+import java.util.Scanner;
+
+public class Name{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter string:");
+        String str = scanner.nextLine();
+        System.out.println("Enter a character:");
+        char ch1 = scanner.next().charAt(0); // Read the next token as a string and get the first character
+   
+        String result = "";
+
+        for (int i = 0; i < str.length() ; i++) {
+          char ch2 = str.charAt(i);
+          if ( ch1==ch2 ) {
+            System.out.println(result);
+            result="";
+          }
+          else {
+            result = result + ch2;
+          }
+
+        scanner.close();
+        }
+        System.out.print(result);
+
+    }
+}
+
+
+
+Evaluation#####################################################
+
+
+Task01-----------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter string:");
+        String str = scanner.nextLine();
+   
+        String result = "";
+
+        for (int i = str.length() -1; i >=0 ; i--) {
+          char ch = str.charAt(i);
+          result+= ch;
+        }
+        System.out.print(result);
+
+    }
+}
+
+
+
+
+
+Task02-----------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter string:");
+        String str = scanner.nextLine();
+        int count_vow=0;
+        int count_con=0;
+   
+        String result = "";
+
+        for (int i = 0; i < str.length() ; i++) {
+          char ch = str.charAt(i);
+          if ( ( (int) ch >= 97 && (int) ch <= 122 ) || ( (int) ch >= 65 && (int) ch <= 90 ) ) {
+            if ( ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='A' || ch =='E' || ch=='I' || ch=='O' || ch=='U') {
+              count_vow+=1;
+            }
+            else {
+              count_con+=1;
+            }
+          } 
+        }
+        if (count_vow>0 && count_con>0 && count_vow%3==0 && count_con%5==0) {
+          System.out.print("Aaarr! Me Plunder!!");
+        }
+        else {
+          System.out.print("Blimey! No Plunder!!");
+        }       
+
+    }
+}
+
+
+
+
+Homework#######################################################
+
+
+Task01-----------------------------------------------
+
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String a= "CSE110 is easy";
+        String var1="";
+        String var2="";
+        for (int i=0;i<a.length();i++){
+            if (a.charAt(i)==' '){
+                var2 = var1+" "+var2;
+                var1="";
+            }
+            else {
+                var1+=a.charAt(i);
+            }
+            
+        }
+        var2 = var1+" "+var2;
+        System.out.println("Output:"+var2);
+    }
+}
+
+
+
+
+
+
+Task02-----------------------------------------------------------
+
+
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter a string: ");
+        String var = scanner.nextLine();
+        char test = var.charAt(0);
+        String compressed ="";
+        int count = 1;
+        for (int i=1; i<var.length(); i++) {
+          if (var.charAt(i)==test){
+            count++;
+          }
+          else{
+            compressed+= test;
+            compressed+=count;
+            count=1;
+            test = var.charAt(i);
+          }
+        }
+        compressed+= test;
+        compressed+=count;
+        System.out.println(compressed);     
+    }
+}
+
+
+
+
+
+Task03------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the first string in lowercase:");
+        String str1 = scanner.nextLine();
+        System.out.println("Enter the second string in lowercase:");
+        String str2 = scanner.nextLine();
+
+        String concatenated = str1 + str2;
+        String result = "";
+
+        for (int i = 0; i < concatenated.length(); i++) {
+            char c = concatenated.charAt(i);
+            int value1=0;
+            int value2=0;
+
+            for (int j = 0; j < str1.length(); j++) {
+                if (str1.charAt(j) == c) {
+                    value1=1;
+                    break;
+                }
+            }
+
+            for (int k = 0; k < str2.length(); k++) {
+                if (str2.charAt(k) == c) {
+                    value2=1;
+                    break;
+                }
+            }
+
+            if (value1==0 || value2==0) {
+                result += c;
+            }
+        }
+
+        System.out.print("Modified String: ");
+        for (int i = 0; i < result.length(); i++) {
+          char ch = (char) ( (int) result.charAt(i) -32 );
+
+          System.out.print(ch);
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+
+Alter-----------------------------------------
+
+
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the first string in lowercase:");
+        String str1 = scanner.nextLine();
+        System.out.println("Enter the second string in lowercase:");
+        String str2 = scanner.nextLine();
+
+        String result = "";
+        
+        for (int i=0; i<str1.length();i++){
+            boolean count=true;
+            for (int j=0; j<str2.length();j++){
+                if (str1.charAt(i)==str2.charAt(j)) {
+                    count=false;
+                }
+            }
+            if (count){
+                result +=str1.charAt(i);
+            }
+        }
+
+        for (int i=0; i<str2.length();i++){
+            boolean count=true;
+            for (int j=0; j<str1.length();j++){
+                if (str2.charAt(i)==str1.charAt(j)) {
+                    count=false;
+                }
+            }
+            if (count){
+                result +=str2.charAt(i);
+            }
+        }
+        System.out.print("Modified String: ");
+        for (int i = 0; i < result.length(); i++) {
+          char ch = (char) ( (int) result.charAt(i) -32 );
+
+          System.out.print(ch);
+        }
+
+        scanner.close();
+    }
+}
+
+
+Task04------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a string:");
+        String str = scanner.nextLine();
+
+        String result = "";
+        int count =0;
+
+        for (int i = 0; i < str.length(); i++) {
+          if ( (int) str.charAt(i)<65) {
+            result+=str.charAt(i);
+          } 
+          else {
+            if (count ==0) {
+              int ch1 = (int) str.charAt(i);
+              if (ch1<96) {
+                ch1+=32;
+              }
+              result += (char) ch1;
+              count =1;
+            }
+            else {
+              int ch2 = (int) str.charAt(i);
+              if (ch2>96) {
+                ch2-=32;
+              }
+              result += (char) ch2;
+              count =0;              
+            }
+          }
+
+        scanner.close();
+        }
+        System.out.print("Output: ");
+        System.out.println(result);
+    }
+}
+
+Task05------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking input from the user
+        System.out.print("Enter first String ");
+        String str1 = scanner.nextLine();
+        System.out.print("Enter second String ");
+        String str2 = scanner.nextLine();
+
+        for (int i = 0; i < str1.length(); i++) {
+            int value = 0;
+            int ch1 = (int) str1.charAt(i);
+            if ( ch1 > 96) {
+              ch1=ch1- 32;
+            }
+            for (int j = 0; j < str2.length(); j++) { 
+              int ch2 = (int) str2.charAt(j);
+               if ( ch2 > 96) {
+                 ch2=ch2- 32;
+               }
+               if (ch1==ch2) {
+                 value = 1;
+                 break;
+               }
+            }
+            if (value == 0) {
+                System.out.print(str1.charAt(i));
+            }
+        }
+        
+    }
+}
+
+
+
+
+Task06----------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Name{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter string password:");
+        String str = scanner.nextLine();
+
+        int count_UL =0;
+        int count_LL =0;
+        int count_D =0;
+        int count_SC =0;
+
+        if (str.length() < 8) {
+            System.out.println("False");
+  
+        }
+        else{
+        for (int i = 0; i < str.length(); i++) {
+          char ch = str.charAt(i);
+          if ( (int) ch >=65 &&  (int) ch <= 90) {
+            count_UL++;
+          }
+          else if ( (int) ch >=97 &&  (int) ch <= 122) {
+            count_LL ++;
+          }
+          else if ( (int) ch >=40 &&  (int) ch <= 57) {
+            count_D ++;
+          }
+          else {
+            if ( (int) ch !=32) {
+              count_SC++;
+            }
+            
+          }
+          
+        scanner.close();
+        }
+        if (count_UL > 0 && count_LL > 0 && count_D > 0 && count_SC > 0) {
+          System.out.println("True");
+        }
+        else {
+          System.out.println("False");
+        }
+        }
+    }
+}
+
+
+
+
+Task07----------------------------------------------------------------------------
+
+
+
+import java.util.Scanner;
+
+public class Name{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter first string:");
+        String str1 = scanner.nextLine();
+        System.out.println("Enter second string:");
+        String str2 = scanner.nextLine();
+        String result = "";
+        int count =0;
+
+        for (int i = 0; i < str1.length()-1; i++) {
+          // converting to lowercase using Ascii as we assume str2 is in lowercase
+          char ch1 = str1.charAt(i);
+          if ( (int) ch1 <96) {
+            ch1 = (char) ( (int) ch1 +32);
+          }
+          char ch2 = str1.charAt(i+1);
+          if ( (int) ch2 <96) {
+            ch2 = (char) ( (int) ch2 +32);
+          }      
+          
+          result += ch1 ;
+          result += ch2 ;
+          if (str2.equals(result)) {
+            count++;
+          }
+          result="";
+        scanner.close();
+        }
+        System.out.println("Occurrence: "+count+" time(s)");
+    }
+}

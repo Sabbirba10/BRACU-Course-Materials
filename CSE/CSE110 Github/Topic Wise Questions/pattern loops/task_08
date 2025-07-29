@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class pattern4_5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if (n <= 0 || n >= 20) {
+            return;
+        }
+        for (int rc = 1; rc <= n; rc++) {
+
+            if (rc == 1 || rc==n) {
+                for (int cc = 1; cc <= n; cc++) {
+                    System.out.print("*");
+                }
+            }
+            else if (rc >1 && rc<n){
+                System.out.print("*");
+                for (int sC = 2; sC <= (n - 1); sC++) {   //1 to 10 hole 2 theke 9
+                    System.out.print(" ");
+                }
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+/* ami hoitase protita row count re alada hishabe count korsi
+then column count dhorsi from 1-n and star print korsi for rc 1 and n
+then for rc between 1 and n
+first e star porsi korsi and then 8 ta gap and then star
+SOB INNER LOOP ER BAIRE GIYA BLANK PRINT LN
+ */

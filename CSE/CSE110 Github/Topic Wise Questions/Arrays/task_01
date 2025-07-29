@@ -1,0 +1,42 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class task1
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("N = ");
+        int N = sc.nextInt();
+
+
+        int[] arr1 = new int[N];
+        for (int i = 0; i <= arr1.length - 1; i++)
+        {
+            System.out.print("Enter a number: ");
+            int num = sc.nextInt();
+             arr1 [i] = num;
+        }
+
+
+
+
+        System.out.print("Enter another number: ");
+        int num2= sc.nextInt();
+            System.out.println("The elements of the array are:");
+            for (int j = 0; j <= arr1.length - 1; j++)
+            {
+                System.out.println(j + ": " + arr1[j]);
+            }
+
+
+
+            System.out.println("After resizing the array: ");
+            for(int x=0; x<=arr1.length-1;x++)
+            {
+                System.out.print(arr1[x]+ " ");
+            }
+                System.out.print(num2);
+
+
+    }
+}

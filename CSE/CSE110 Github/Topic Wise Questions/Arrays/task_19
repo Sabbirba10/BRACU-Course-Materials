@@ -1,0 +1,24 @@
+import java.util.Arrays;
+public class task19 {
+    public static void main(String[] args) {
+        String[] arr1 = {"java","python","c++"};
+        String s2="";
+        String[] arr2= new String [arr1.length];
+        System.out.print("Output: ");
+       for(int i=0;i<arr1.length;i++){
+           s2="";
+           String s1= arr1[i];
+           for(int j=0;j<s1.length();j++){
+               char ch= s1.charAt(j);
+               if(ch>='a'&& ch<= 'z'){
+                  s2 += (char)(ch -32);
+               }
+           }
+           arr2[i]= "\""+ s2+ "\""  ;  //backslash skips a chracter for you nahole kokhon """ eta ditona java
+
+
+
+       }
+       System.out.print(Arrays.toString(arr2));
+    }
+}

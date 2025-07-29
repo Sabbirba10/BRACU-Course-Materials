@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class task7 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of N: ");
+        int N = sc.nextInt();
+        System.out.print("Enter the value of N: ");
+        int n=sc.nextInt();
+        System.out.print("Enter the value of N: ");
+
+
+        int ok=sc.nextInt();
+
+
+        oneToN(1, N);
+        System.out.println();
+        nToOne(1,n);
+        System.out.println();
+      int sum =  recursiveSum(1,ok);
+        System.out.println(sum);
+    }
+
+    public static int recursiveSum(int x, int ok) {
+
+        if(ok <=x) {
+            return x;
+        }
+
+        else {
+            return ok +recursiveSum(1, ok -1);
+        }
+
+    }
+
+
+
+
+    public static void nToOne(int x ,int N) {
+        if(N<=x) {
+            System.out.print(1+" ");
+        }
+        else{
+            System.out.print(N+" ");
+            nToOne(1,N-1); //use --N nahole N-- is a post-decrement operator which means it will use the value of N first and then decrement
+        }
+    }
+
+
+    public static void oneToN(int x, int N) {
+        if (x > N) {
+            return; // Base case
+        }
+        System.out.print(x + " ");
+        oneToN(x + 1, N); //recursion
+    }
+
+
+}

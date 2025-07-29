@@ -1,0 +1,274 @@
+//--TASK--01----------------------------------------
+public class BankAccount {
+  public int AccountNo = 0;
+  public String Type = "Not Set";
+  
+  public String printDetails () {
+    String a = "Account No: "+AccountNo+"\nType: "+Type;
+    return a;}
+  
+  public void setInfo (int a, String b) {
+    this.AccountNo = a;
+    this.Type = b;
+    System.out.println("Account information updated!");}
+}
+//
+//
+//
+//
+//--TASK--02----------------------------------------
+public class Shape {
+  public String ShapeName;
+  public double Area;
+  
+  public void setParameters (String a, int b) {
+    this.ShapeName = a;
+    this.Area = 3.14*b*b;}
+  
+  public void setParameters (String a, int b, int c) {
+    this.ShapeName = a;
+    this.Area = 0.5*b*c;}
+  
+  public void setParameters (String a, double b, double c) {
+    this.ShapeName = a;
+    this.Area = b*c;}
+  
+  public String details () {
+    String a = "Shape Name: "+ShapeName+"\nArea: "+Area;
+    return a;}
+}
+//
+//
+//
+//
+//--TASK--03----------------------------------------
+public class Shelf {
+  public int capacity;
+  public int Numberofbooks;
+  
+  public void showDetails () {
+    System.out.println("Shelf capacity: "+capacity);
+    System.out.println("Number of books: "+Numberofbooks);}
+  
+  public void addBooks (int a) {
+    if (this.capacity==0) {
+      System.out.println("Zero capacity. Cannot add books.");}
+    else if (this.capacity>this.Numberofbooks+a) {
+      this.Numberofbooks = this.Numberofbooks + a;
+      System.out.println(a+" books added to shelf");}
+    else {
+      System.out.println("Exceeds capacity");}}
+}
+//
+//
+//
+//
+//--TASK--04----------------------------------------
+public class Student {
+  public String Name = "Not Set";
+  public String Department = "CSE";
+  public double CGPA = 0.0;
+  public int Credits = 9;
+  public String ScholarshipStatus = "Not Set";
+  
+  public void showDetails () {
+    System.out.println("Name: "+Name);
+    System.out.println("Department: "+Department);
+    System.out.println("CGPA: "+CGPA);
+    System.out.println("Credits: "+Credits);
+    System.out.println("Scholarship Status: "+ScholarshipStatus);}
+  
+  public void updateDetails (String a, double b, int c) {
+    this.Name = a;
+    this.CGPA = b;
+    this.Credits = c;}
+  
+  public void updateDetails (String a, double b) {
+    this.Name = a;
+    this.CGPA = b;}
+  
+  public void updateDetails (String a, double b, int c, String d) {
+    this.Name = a;
+    this.CGPA = b;
+    this.Credits = c;
+    this.Department = d;}
+  
+  public void checkScholarshipEligibility () {
+    if (Credits>10) {
+      if (CGPA >=3.7) {
+        this.ScholarshipStatus = "Merit based scholarship";
+        System.out.println(Name+" is eligible for "+ScholarshipStatus);}
+      else if (CGPA>=3.5) {
+        this.ScholarshipStatus = "Need-based scholarship";
+        System.out.println(Name+" is eligible for "+ScholarshipStatus);}
+      else {
+        this.ScholarshipStatus = "No scholarship";
+        System.out.println(Name+" is not eligible for Scholarship");}}
+    else {
+      this.ScholarshipStatus = "No scholarship";
+      System.out.println(Name+" is not eligible for Scholarship");}}
+}
+//
+//
+//
+//
+//--TASK--05----------------------------------------
+public class Library {
+  public int MaximumCapacity;
+  public int TotalBooks;
+  public String [] Booklist;
+  
+  public void setBookCapacity (int a) {
+    this.MaximumCapacity = a;}
+  
+  public void addBook (String a) {
+    if (TotalBooks == 0) {
+      Booklist = new String [MaximumCapacity];}
+    if (TotalBooks < MaximumCapacity) {
+      this.Booklist[TotalBooks] = a;
+      this.TotalBooks = this.TotalBooks + 1;
+      System.out.println("Book '"+a+"' added to the library");}
+    else {
+      System.out.println("Exceeds maximum capacity. You can't add more than "+MaximumCapacity+" books");}}
+  
+  public void printDetail () {
+    System.out.println("Maximum Capacity: "+MaximumCapacity);
+    System.out.println("Total Books: "+TotalBooks);
+    System.out.println("Book list:");
+    for (int i = 0; i<TotalBooks; i++) {
+      System.out.println(this.Booklist[i]);}}
+}
+//
+//
+//
+//
+//--TASK--06----------------------------------------
+public class TaxiLagbe {
+  public String Taxinumber;
+  public String area;
+  public int TotalPassenger;
+  public String [] PassengerLists = new String [4];
+  public int Totalcollectedfare;
+  
+  public void storeInfo (String a, String b) {
+    this.Taxinumber = a;
+    this.area = b;}
+  
+  public void printDetails () {
+    System.out.println("Taxi number: "+Taxinumber);
+    System.out.println("This taxi can cover "+area+" area");
+    System.out.println("Total Passenger: "+TotalPassenger);
+    System.out.println("Passenger Lists: ");
+    for (int i = 0; i<TotalPassenger; i++) {
+      System.out.print(this.PassengerLists[i]+" ");}
+    System.out.println();
+    System.out.println("Total collected fare: "+Totalcollectedfare+" Taka");}
+  
+  public void addPassenger (String a, int b) {
+    if (TotalPassenger<4) {
+      this.PassengerLists[TotalPassenger] = a;
+      this.Totalcollectedfare = this.Totalcollectedfare + b;
+      this.TotalPassenger = this.TotalPassenger+1;
+      System.out.println("Dear "+a+"! Welcome to TaxiLagbe");}
+    else {
+      System.out.println("Taxi Full! No more passengers can be added");}}
+  
+  public void addPassenger (String a, int b, String c, int d) {
+    if (TotalPassenger<4) {
+      this.PassengerLists[TotalPassenger] = a;
+      this.Totalcollectedfare = this.Totalcollectedfare + b;
+      this.TotalPassenger = this.TotalPassenger+1;
+      System.out.println("Dear "+a+"! Welcome to TaxiLagbe");}
+    else {
+      System.out.println("Taxi Full! No more passengers can be added");}
+    if (TotalPassenger<4) {
+      this.PassengerLists[TotalPassenger] = c;
+      this.Totalcollectedfare = this.Totalcollectedfare + d;
+      this.TotalPassenger = this.TotalPassenger+1;
+      System.out.println("Dear "+c+"! Welcome to TaxiLagbe");}
+    else {
+      System.out.println("Taxi Full! No more passengers can be added");}}
+}
+//
+//
+//
+//
+//--TASK--07----------------------------------------
+public class Cart {
+  public double DiscountApplied;
+  public double Totalprice;
+  public int num;
+  public int count;
+  public String [] item = new String [3];
+  public double [] price = new double [3];
+  
+  public void create_cart (int a) {
+    this.num = a;}
+  
+  public void addItem (String a, double b) {
+    if (count<3) {
+      this.item[count] = a;
+      this.price[count] = b;
+      this.count = this.count+1;
+      this.Totalprice = this.Totalprice+b;
+      System.out.println(a+" added to cart "+num);
+      System.out.println("You have "+count+" item(s) in your cart now");}
+    else {
+      System.out.println("You already have 3 items on your cart");}}
+  
+  public void addItem (double a, String b) {
+    if (count<3) {
+      this.item[count] = b;
+      this.price[count] = a;
+      this.count = this.count+1;
+      this.Totalprice = this.Totalprice+a;
+      System.out.println(b+" added to cart "+this.num);
+      System.out.println("You have "+this.count+" item(s) in your cart now");}
+    else {
+      System.out.println("You already have 3 items on your cart");}}
+  
+  public void cartDetails () {
+    System.out.println("Your cart(c"+num+") :");
+     for (int i = 0; i<count; i++) {
+      System.out.println(this.item[i]+" - "+this.price[i]);}
+     System.out.println("Discount Applied: "+DiscountApplied+"%");
+     System.out.println("Total price :"+Totalprice);}
+  
+  public void giveDiscount (double a) {
+    this.Totalprice = this.Totalprice - (this.Totalprice*(a/100));
+    this.DiscountApplied = a;}
+}
+//
+//
+//
+//
+//--TASK--08----------------------------------------
+public class Reader {
+  public String name = "New user";
+  public int capacity = 0;
+  public int count;
+  public String [] book;
+  
+  public String createReader (String a, int b) {
+    this.name = a;
+    this.capacity = b;
+    book = new String [b];
+    return "A new reader is created!";}
+  
+  public void readerInfo () {
+    System.out.println("Name: "+name);
+    System.out.println("Capacity: "+capacity);
+    System.out.println("Books: ");
+    if (count == 0) {
+      System.out.println("No books added yet");}
+    else {
+      for (int i = 0; i<count; i++) {
+        System.out.println("Book "+(i+1)+": "+this.book[i]);}}}
+  
+  public void addBook (String a) {
+    if (count<capacity) {
+      this.book[count] = a;
+      this.count = this.count + 1;}
+    else {
+      System.out.println("No more capacity");}}
+}

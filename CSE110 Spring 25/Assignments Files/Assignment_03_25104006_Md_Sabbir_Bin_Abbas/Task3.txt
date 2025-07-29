@@ -1,0 +1,9 @@
+public class Task3 {
+    public static void main(String[] args) {
+        int sum = 0;
+        for (int i = 63; i <= 600; i += 63) {
+            sum += i;
+        }
+        System.out.println("Sum: " + sum); 
+    }
+}

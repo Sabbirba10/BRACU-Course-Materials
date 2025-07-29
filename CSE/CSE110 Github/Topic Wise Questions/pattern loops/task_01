@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class pattern1 {
+    public static void main (String [] args){
+    Scanner sc= new Scanner(System.in);
+        System.out.print("enter c: ");
+        int c=sc.nextInt();
+        System.out.print("enter r: ");
+    int r= sc.nextInt();
+
+    for (int i=1; i<=r; i++) {
+
+        for (int j = 1; j <= c; j++) {
+
+            System.out.print(" ");
+            System.out.print(j);
+
+        }
+        System.out.println();
+
+    }
+
+    }
+}
+
+
+/*int num1=scanner.nextInt();
+    int num2=scanner.nextInt();
+    for(int line=1;line<=num2;line++){
+
+      for(int col=1;col<=num1;col++){
+        System.out.print(col+" ");
+      }
+      System.out.println();
+    }
+
+
+System.out.println("enter length :");
+    int length = sc.nextInt();
+
+    System.out.println("enter width :");
+    int width = sc.nextInt();
+
+    for (int j = 1; j <= length; j++) {
+       for ( int k = 1; k <= width;k++){
+            System.out.print(j+" ");
+         }
+      System.out.println();
+    }
+
+
+ */
+

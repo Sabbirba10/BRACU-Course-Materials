@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class Task15 {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter an integer: ");
+        String numStr = sc.next();
+        for (char ch : numStr.toCharArray()) {
+        System.out.print(ch + " ");
+        }
+        System.out.println();
+    }
+}

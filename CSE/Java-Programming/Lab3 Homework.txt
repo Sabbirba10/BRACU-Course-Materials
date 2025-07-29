@@ -1,0 +1,334 @@
+
+Homework####################################################################
+task01---------------------------------------------------------
+
+import java.util.Scanner;
+public class Lab3 {
+  public static void main(String[] args) { 
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter the first number: ");
+    double a = scanner.nextDouble();
+    System.out.print("Enter the second number: ");
+    double b = scanner.nextDouble();
+    System.out.print("Enter the operator: ");
+    
+    String op = scanner.next();
+    char ope = op.charAt(0);
+    
+    double result = 0;
+    switch (ope) {
+      case '+' :
+        result = a+b;
+        break;
+      case '-' :
+        result = a-b;
+        break;
+      case '*':
+        result = a*b;
+        break;
+      case '/':
+        if (a<b) {
+          
+      }
+        result = a/b;
+        break;
+    }
+    System.out.print(result);
+    
+   /* ADD YOUR CODE HERE */
+  }  
+}
+
+
+
+
+Alter task01---------------------------------------------------------------
+
+import java.util.Scanner;
+public class Lab3 {
+  public static void main(String[] args) { 
+ Scanner scanner = new Scanner(System.in);
+
+        // Input
+        System.out.println("Enter first number: ");
+        int num1 = scanner.nextInt();
+        System.out.println("Enter second number: ");
+        int num2 = scanner.nextInt();
+        System.out.println("Enter operator (+, -, *, /): ");
+        String operator = scanner.next();
+
+        // Calculation
+        int result = 0;
+        if (operator.equals("+")) {
+            result = num1 + num2;
+        } else if (operator.equals("-")) {
+            result = num1 - num2;
+        } else if (operator.equals("*")) {
+            result = num1 * num2;
+        } else if (operator.equals("/")) {
+            if (num2 != 0) {
+                result = num1 / num2;
+            } else {
+                System.out.println("Error: Division by zero.");
+                return;
+            }
+        } else {
+            System.out.println("Error: Invalid operator.");
+            return;
+        }
+
+        // Output
+        System.out.println("Result: " + result);
+   /* ADD YOUR CODE HERE */
+  }  
+}
+
+
+
+task02-------------------------------------------------------------------
+
+
+import java.util.Scanner;
+public class Lab3 {
+  public static void main(String[] args) { 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an integer number: ");
+        int number = scanner.nextInt();
+        
+        if (number % 5 == 0 && number % 7 == 0) {
+            System.out.println("Divisible by Both");
+        } 
+        else if (number%5==0) {
+          System.out.println("Invalid: Divisible by 5 Only ");
+        }
+         else if (number%7==0) {
+          System.out.println("Invalid: Divisible by 7 Only ");
+        }
+        else {
+            System.out.println("No");
+        }
+   /* ADD YOUR CODE HERE */
+  }  
+}
+
+
+
+task03-------------------------------------------------------------------
+
+
+import java.util.Scanner;
+public class Lab3 {
+  public static void main(String[] args) { 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Input the value of 'X': ");
+        double num = scanner.nextInt();
+        double result = 0;
+        if (num<0) {
+          result = 2*num;
+        }
+        else if (num>=0 && num<2) {
+          result = num + 1;      
+        }
+        else if (num>=2 && num<5) {
+          result = (num*num) - 1;
+        }
+        else {
+          result = (3*(num*num)) + 2;
+        }
+        System.out.println("Output: "+result);
+   /* ADD YOUR CODE HERE */
+  }  
+}
+
+
+
+
+task04-------------------------------------------------------------------
+
+
+import java.util.Scanner;
+public class Lab3 {
+  public static void main(String[] args) { 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter BRACU Student ID: ");
+        int studentID = scanner.nextInt();
+        
+        int year = studentID / 1000000; // Extracting the first two digits as year
+        int sessionCode = (studentID / 100000) % 10; // Extracting the 3rd digit as session code
+        
+        String session = "";
+        switch (sessionCode) {
+            case 1:
+                session = "Spring";
+                break;
+            case 2:
+                session = "Fall";
+                break;
+            case 3:
+                session = "Summer";
+                break;
+            default:
+                session = "Unknown";
+        }
+        
+        System.out.println("Student joined BRAC in " + session + " " + year);
+   /* ADD YOUR CODE HERE */
+  }  
+}
+
+
+
+
+task05-------------------------------------------------------------------
+
+
+import java.util.Scanner;
+public class Lab3 {
+  public static void main(String[] args) { 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter payment: ");
+        double payment = scanner.nextDouble();
+        System.out.print("Enter age: ");
+        int age = scanner.nextInt();
+
+        double tax = 0;
+
+        if ((age < 18) || (payment < 10000)) {
+            System.out.println("Your tax amounts to 0 Tk");
+        } 
+        else {
+            if (payment >= 10000 && payment <= 20000) {
+                tax = 0.05 * payment;
+                System.out.println("Your tax amounts to " + tax + " Tk");
+            } 
+            else {
+                tax = 0.10 * payment;
+                System.out.println("Your tax amounts to " + tax + " Tk");
+            }
+        }
+   /* ADD YOUR CODE HERE */
+  }  
+}
+
+
+
+
+task06-------------------------------------------------------------------
+
+
+import java.util.Scanner;
+public class Lab3 {
+  public static void main(String[] args) { 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter three float numbers:");
+        float num1 = scanner.nextFloat();
+        float num2 = scanner.nextFloat();
+        float num3 = scanner.nextFloat();
+
+        // Assume the first number is both max and min initially
+        float max = num1;
+        float min = num1;
+
+        // Update max and min accordingly
+        if (num2 > max) {
+            max = num2;
+        } else if (num2 < min) {
+            min = num2;
+        }
+
+        if (num3 > max) {
+            max = num3;
+        } else if (num3 < min) {
+            min = num3;
+        }
+
+        System.out.println("Maximum number is " + max);
+        System.out.println("Minimum number is " + min);
+   /* ADD YOUR CODE HERE */
+  }  
+}
+
+
+
+
+
+
+task07-------------------------------------------------------------------
+
+
+
+import java.util.Scanner;
+
+public class Lab04 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);   
+        System.out.print("Enter the amount the customer need to pay(Taka) : ");
+        int payment = scanner.nextInt();
+        System.out.print("Enter the amount, customer gave(Taka) : ");
+        int gave =scanner.nextInt();
+        
+        if (payment > gave) {
+          System.out.println("Please pay "+ (payment-gave) +" taka more.");
+        }
+        else if (payment == gave) {
+          System.out.println("The returned amount is 0 taka. ");
+        }
+        else {
+          int change = gave - payment;
+          System.out.println("The returned amount is "+ (gave-payment)+" taka.");
+          System.out.println("100 taka note: "+change/100);
+          change = change % 100;
+          System.out.println("50 taka note: "+change/50);
+          change = change % 50;
+          System.out.println("20 taka note: "+change/20);
+          change = change % 20;
+          System.out.println("10 taka note: "+change/10);
+          change = change % 10;
+          System.out.println("5 taka coin: "+change/5);
+          change = change % 5;
+          System.out.println("2 taka coin: "+change/2);
+          change = change % 2;
+          System.out.println("1 taka coin: "+change);
+          
+        }
+    }
+}
+     
+
+
+
+
+
+
+task08-------------------------------------------------------------------
+
+
+
+import java.util.Scanner;
+public class Lab3 {
+  public static void main(String[] args) { 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Input the 1st number:");
+        int num1 = scanner.nextInt();
+
+        System.out.println("Input the 2nd number:");
+        int num2 = scanner.nextInt();
+
+        System.out.println("Input the 3rd number:");
+        int num3 = scanner.nextInt();
+
+        if (num1 == num2 && num2 == num3) {
+            System.out.println("All numbers are equal");
+        } 
+        else if (num1 != num2 && num2 != num3 && num1 != num3) {
+            System.out.println("All numbers are different");
+        } 
+        else {
+            System.out.println("Neither all are equal or different");
+        }
+   /* ADD YOUR CODE HERE */
+  }  
+}

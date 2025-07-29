@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class task8 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter input:");
+    String n = sc.nextLine();
+    String join = "";
+    boolean lowerCase = false;
+    for (int i = 0; i < n.length(); i++) {
+      char currentCharacter = n.charAt(i);
+      if (currentCharacter >= 'a' &&
+          currentCharacter <= 'z') {
+        if (lowerCase) {
+          currentCharacter = (char)
+            (currentCharacter - 32); // Convert to uppercase
+        }
+        lowerCase = !lowerCase;
+      } else if (currentCharacter >= 'A' &&
+                 currentCharacter <= 'Z') {
+        if (!lowerCase) {
+          currentCharacter = (char)
+            (currentCharacter + 32); // Convert to lowercase
+        }
+        lowerCase = !lowerCase;
+      }
+      join += currentCharacter;
+    }
+    System.out.println(join);
+    sc.close();
+  }
+}

@@ -1,0 +1,52 @@
+public class task11{
+  public static boolean is_vowel(char ch){
+    return ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch == 'i' || ch == 'I' || ch == 'o' || ch == 'O' || ch == 'u' || ch == 'U';
+  }
+  public static boolean is_letter(char ch){
+    return (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z');
+  }
+  public static int is_vowel(String word){
+    int count = 0;
+    for(int i = 0; i < word.length(); i++){
+      if(is_vowel(word.charAt(i))){
+        count++;
+      }
+    }
+    return count;
+  }
+  public static int is_consonant(String word){
+    int count = 0;
+    for(int i = 0; i < word.length(); i++){
+      if(is_letter(word.charAt(i)) && !is_vowel(word.charAt(i))){
+        count++;
+      }
+    }
+    return count;
+  }
+  public static int vowel_sum(String[] words){
+    int total_vowel = 0;
+    for(int i = 0; i < words.length; i++){
+      String word = words[i];
+      total_vowel += is_vowel(word);
+    }
+    return total_vowel;
+  }
+  public static int consonant_sum(String[] words){
+    int total_conso = 0;
+    for(int i = 0; i < words.length; i++){
+      String word = words[i];
+      total_conso += is_consonant(word);
+    }
+    return total_conso;
+  }
+  public static void main(String[] args) {
+    String s = "The quick brown fox jumps over the lazy dog";
+    System.out.println("Number of vowels in the string: " + is_vowel(s));
+    System.out.println("Number of consonant in the string: " + is_consonant(s));
+
+    String [] names = {"Bob", "Alice", "Max", "Marry", "Rosy"};
+    System.out.println( "The total number of vowels in the array is: " + vowel_sum(names));
+    System.out.println( "The total number of consonants in the array is: " + consonant_sum(names));
+
+  }
+}

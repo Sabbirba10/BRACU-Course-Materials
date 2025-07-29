@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class task13_prev {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String s1 = sc.nextLine();
+
+        String compressed = "";
+        int count = 1;
+
+        for (int i = 0; i < s1.length(); i++) {
+            char ch = s1.charAt(i);
+            if (i + 1 < s1.length()) {
+                for (int j = i + 1; j < s1.length(); j++) {
+                    if (ch == s1.charAt(j)) {
+                        count++;
+                        i++;
+                    } else {
+                        break;
+                    }
+                }
+            }
+            compressed += ""+  ch + count;
+            count = 1;
+        }
+
+        System.out.println("Compressed string: " + compressed);
+        sc.close();
+    }
+}
+
+/* never forget to add joining wala string ffs
+
+ */

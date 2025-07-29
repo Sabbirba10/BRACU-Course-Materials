@@ -1,0 +1,106 @@
+// Task 1
+import java.util.Scanner;
+public class Task1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            System.out.print(i);
+        }
+    }
+}
+
+// Task 2
+import java.util.Scanner;
+public class Task2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        int col = sc.nextInt();
+        for (int i = 1; i <= row; i++) {
+            for (int s = 1; s <= col; s++) {
+                System.out.print(s);
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Task 3
+import java.util.Scanner;
+public class Task3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int s = 1; s <= i; s++) {
+                System.out.print(s);
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Task 4
+import java.util.Scanner;
+public class Task4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i = n; i >= 1; i--) {
+            for (int s = 1; s < i; s++) {
+                System.out.print(" ");
+            }
+            for (int s = i; s <= n; s++) {
+                System.out.print(s);
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Task 5
+import java.util.Scanner;
+public class Task5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+            for (int s = 1; s <= 2 * i - 1; s++) {
+                System.out.print(s);
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Task 6
+import java.util.Scanner;
+public class Task6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+            for (int s = 1; s <= 2 * i - 1; s++) {
+                System.out.print(s);
+            }
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+            for (int s = 1; s <= 2*i - 1; s++) {
+                System.out.print(s);
+            }
+            System.out.println();
+        }
+    }
+}
+

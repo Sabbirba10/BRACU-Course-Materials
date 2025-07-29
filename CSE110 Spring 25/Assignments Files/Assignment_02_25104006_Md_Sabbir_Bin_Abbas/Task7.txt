@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Task7 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter your 8 digit BRACU Student ID: ");
+        int studentID = input.nextInt();
+        int year = studentID/1000000; 
+        int sessionCode = (studentID/100000)%10; 
+        String session = "";
+        if (sessionCode == 1) {
+            session = "Spring";
+        } else if (sessionCode == 3) {
+            session = "Summer";
+        } else if (sessionCode == 2) {
+            session = "Fall";
+        } else {
+            session = "Unknown";
+        }
+        System.out.println("Student Joined BRAC in "+session+" "+year);
+        input.close();
+    }
+}

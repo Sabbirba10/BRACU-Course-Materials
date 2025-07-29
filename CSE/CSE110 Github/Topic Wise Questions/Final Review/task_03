@@ -1,0 +1,35 @@
+public class task3 {
+  public static boolean is_letter(char ch){
+    return (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z');
+  }
+  public static boolean is_valid(String email){
+    int at_pos = -1;
+    int dot_pos = -1;
+
+    if(!is_letter(email.charAt(0))) return false; //must start with letter
+
+    for(int i = 0; i < email.length(); i++){
+      if(email.charAt(i) == '@'){
+        if(at_pos != -1) return false; //@ already found  --> invalid
+        at_pos = i;
+      }else if(email.charAt(i) == '.' && at_pos != -1){ //@ is found and the character is . (so its after @)
+        dot_pos = i;
+      }
+    }
+
+    return at_pos > 0 && at_pos < email.length() - 1 && dot_pos != -1 && dot_pos < email.length() - 1;
+    //@ is neither at the beginning nor at the end and there is a . after @ and its not at the end
+
+  }
+  public static void main(String[] args) {
+    String[] email_list = new String[]{"abc@gmail.com", "!@cv.bd",  "123cse@bracu.ac.bd"};
+    int valid_count = 0;
+
+    for(int i = 0; i < email_list.length; i++){
+      if(is_valid(email_list[i])){
+        valid_count++;
+      }
+    }
+    System.out.println(valid_count);
+  }
+}

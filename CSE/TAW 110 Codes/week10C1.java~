@@ -1,0 +1,9 @@
+import java.util.Scanner;
+public class week10C1
+{
+  public static void main(String[]args)
+  {
+    Scanner sc = new Scanner(System.in);  
+
+  }
+}

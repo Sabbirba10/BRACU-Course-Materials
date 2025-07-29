@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class task14 {
+    public static void main(String []args){
+        int [] arr1 = new int [5];
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter five numbers:");
+        for(int i=0;i<5;i++){
+            System.out.print("Number "+(i+1)+": ");
+            int n= sc.nextInt();
+            arr1[i]=n;
+        }
+//        System.out.println(Arrays.toString(arr1));
+        System.out.print("Enter a number to search for: ");
+        int num=sc.nextInt();
+        for(int i=0;i<5;i++){
+            if(arr1[i]==num){
+                System.out.println("the number is in index "+ i);
+            }
+        }
+    }
+}

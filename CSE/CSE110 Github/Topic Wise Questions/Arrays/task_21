@@ -1,0 +1,16 @@
+public class task21 {
+    public static void main(String[] args) {
+        String s1 = "hello";
+        String s1_modified = "";
+        for(int i = 0; i < s1.length(); i++){
+            char ch = s1.charAt(i);
+            if(ch!='o'){
+                s1_modified += ch;
+            }else{
+                ch += 9;
+                s1_modified += ch;
+            }
+        }
+        System.out.println(s1_modified);
+    }
+}

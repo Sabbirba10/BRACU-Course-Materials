@@ -1,0 +1,84 @@
+
+import java.util.Scanner;
+import java.util.Arrays;
+public class task5 {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("N = ");
+        int N = sc.nextInt();
+        int arr1[] = new int[N];
+
+
+
+
+        for (int i = 0; i < N; i++)
+        {
+            System.out.print("Enter a number:");
+            arr1[i] = sc.nextInt();
+        }
+        int num = sc.nextInt();
+        boolean flag = false;
+        for (int i = 0; i < N; i++)
+        {
+            if (arr1[i] == num)
+            {
+
+                System.out.println(num + " is at index " + i);
+                flag = true;
+                break;
+            }
+        }
+
+
+        if (!flag)
+        {
+            System.out.println("Element not found");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* boolean re 1st false dhorse, then jodi loop er bhitore condition e dukhe tahole true  ar jodi na dukhe thaole toh
+false thakbe e. So it enters the 2nd if condition jetare amra !flag dhorsi not flag. THIS IS A TRICK.
+THIS IS BECUZ FLAG FALSE THAKLE LOOP E DUKHBENA...
+
+2ndly we end the loop cuz else e dile protita number er jonno check korbe. Its like if e na dukhe else e jabe
+then we get to see many "elements not found" text so we end the loop.
+
+ALSOO...WE USED BREAK CUZ FIRST 17 TA TE MATCH KORLE AR PURA LOOP TA RUN KORBENA
+
+
+ALSO AMRA JODI 2ND CONDIITON TA OI LOOP ER MODDHE RAKHTAM TAHOLE BREAK HOILE AR ENTIRE
+LOOP TA E KAAJ KORBENAAA......
+
+
+ */
+

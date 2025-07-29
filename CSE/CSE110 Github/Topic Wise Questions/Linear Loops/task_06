@@ -1,0 +1,14 @@
+public class task6{
+    public static void main(String[] args) {
+      int n=20;
+      int y=0;
+      for (int i=1; i<=n; i++) {
+        if (i % 2 ==0) {
+          y -= i *i;
+        } else {
+          y += i*i;
+        }
+      }
+          System.out.println (y);
+    }
+}

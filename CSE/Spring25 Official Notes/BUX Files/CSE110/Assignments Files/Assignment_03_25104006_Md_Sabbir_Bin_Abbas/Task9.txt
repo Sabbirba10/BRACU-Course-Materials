@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Task9 {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Enter total numbers: ");
+      int count = sc.nextInt();
+      int negative = 0, nonNegative = 0;
+      for (int i = 0; i < count; i++) {
+      System.out.print("Enter number: ");
+      int value = sc.nextInt();
+      if (value < 0) negative++;
+      else nonNegative++;
+        }
+        System.out.println(nonNegative + " Non-negative Numbers");
+        System.out.println(negative + " Negative Numbers");
+    }
+}

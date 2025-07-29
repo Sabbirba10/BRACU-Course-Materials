@@ -1,0 +1,63 @@
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class task6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the length of the array: ");
+        int length = sc.nextInt();
+
+
+
+        double[] arr1 = new double[length];
+        double max = Double.NEGATIVE_INFINITY;
+        double min = Double.POSITIVE_INFINITY;
+        int maxIndex = -1;
+        int minIndex = -1;
+        double sum = 0;
+
+
+
+        for (int i = 0; i < length; i++)
+        {
+            System.out.print("Enter a number: ");
+            arr1[i] = sc.nextDouble();
+
+
+
+            // how to find max and its i
+            if (arr1[i] > max)
+            {
+                max = arr1[i];
+                maxIndex = i;
+            }
+
+            // to find min and its i
+            if (arr1[i] < min)
+            {
+                min = arr1[i];
+                minIndex = i;
+            }
+
+
+
+            // Calculate the sum
+            sum += arr1[i];
+        }
+
+
+
+        double average = sum / length;
+
+
+
+
+        System.out.println("Maximum element " + max + " found at index " + maxIndex);
+        System.out.println("Minimum element " + min + " found at index " + minIndex);
+        System.out.println("Summation: " + sum);
+        System.out.printf("Average: %.2f\n", average);
+
+
+    }
+}

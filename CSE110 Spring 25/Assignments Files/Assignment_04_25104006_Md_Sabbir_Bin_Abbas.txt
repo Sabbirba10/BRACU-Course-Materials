@@ -1,0 +1,165 @@
+// Task 1
+import java.util.Scanner;
+
+public class Task1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(), count = 0, num = 2;
+        while (count<n) {
+            boolean isPrime = true;
+            for (int i=2; i<=Math.sqrt(num); i++) {
+                if (num%i==0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                System.out.println(num);
+                count++;
+            }
+            num++;
+        }
+    }
+}
+
+// Task 2
+import java.util.Scanner;
+
+public class Task2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt(), y = 0;
+        for (int i = 1; i<=N; i++) {
+            int sum = 0;
+            for (int j = 1; j<=i; j++) {
+                sum += j;
+            }
+            y -= sum;
+        }
+        System.out.println("The value of y: " + y);
+    }
+}
+
+// Task 3
+import java.util.Scanner;
+
+public class Task3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.print("Enter number: ");
+            int n = sc.nextInt();
+            if (n%2!= 0) break;
+            int count = 0;
+            for (int i=1; i<=n; i++) {
+                if (n%i == 0) count++;
+            }
+            System.out.println(n + " has " + count + " divisors");
+        }
+    }
+}
+
+// Task 4
+import java.util.Scanner;
+
+public class Task4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        for (int i=0; i<T; i++) {
+            int X = sc.nextInt(), Y = sc.nextInt(), sum = 0, count = 0;
+            if (X%2 == 0) X++;
+            while (count<Y) {
+                sum += X;
+                X += 2;
+                count++;
+            }
+            System.out.println(sum);
+        }
+    }
+}
+
+// Task 5
+import java.util.Scanner;
+
+public class Task5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int cols = sc.nextInt();
+        int rows = sc.nextInt();
+        for (int i = 0; i<rows; i++) {
+            for (int j = 1; j<=cols; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Task 6
+import java.util.Scanner;
+
+public class Task6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(), sum = 0, count = 0, max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
+        for (int i = 0; i < n; i++) {
+            int x = sc.nextInt();
+            if (x > 0 && x % 2 == 0) {
+                sum += x;
+                count++;
+                if (x > max) max = x;
+                if (x < min) min = x;
+            }
+        }
+        if (count == 0) {
+            System.out.println("Max: 0\nMin: 0\nAverage: 0");
+        } else {
+            System.out.println("Max: " + max);
+            System.out.println("Min: " + min);
+            System.out.println("Average: " + (sum / count));
+        }
+    }
+}
+
+// Task 7
+import java.util.Scanner;
+
+public class Task7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.print("Enter Number: ");
+            int n = sc.nextInt();
+            if (n<0) break;
+            System.out.println(n + " ^ 2 = " + (n * n));
+        }
+    }
+}
+
+// Task 8
+import java.util.Scanner;
+
+public class Task8 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int start = sc.nextInt(), end = sc.nextInt();
+        System.out.println("Armstrong numbers:");
+        for (int i = start; i<=end; i++) {
+            int sum = 0, temp = i, digits = String.valueOf(i).length();
+            while (temp>0) {
+                int digit = temp%10;
+                sum += Math.pow(digit,digits);
+                temp /= 10;
+            }
+            if (sum == i) System.out.println(i);
+        }
+    }
+}
+
+
+
+
+
+
+

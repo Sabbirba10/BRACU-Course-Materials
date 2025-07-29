@@ -1,0 +1,10 @@
+public class Task1b {
+    public static void main(String[] args) {
+       int sign = 1;
+        for (int i = 18; i <= 63; i += 9) {
+            System.out.print(i * sign + " ");
+            sign *= -1;
+        }
+        System.out.println();
+    }
+}

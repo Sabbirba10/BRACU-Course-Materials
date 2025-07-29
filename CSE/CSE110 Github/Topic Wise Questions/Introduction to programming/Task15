@@ -1,0 +1,29 @@
+public class task15 {
+  public static void main(String[] args) {
+    int a = 5;
+    int b =7;
+    
+    // a) By Creating a third variable
+    int c = a;                                 // Store the value of a in c
+    a = b;                                // Assign the value of b to a
+    b =c;                            // Assign the value of c to b
+    
+    System.out.println("By Creating a third variable:");
+    System.out.println("a = " + a);
+    System.out.println("b = " + b);
+    
+    // again we write the values for the next question
+    a = 5;
+    b = 7;
+    
+    // b) Without creating any other variables
+    a = a + b;                  // a is the sum of a and b
+    b = a - b;                     //  b's value is a now
+    a = a - b;                         // a's value is now b
+    
+    // Display swapped values
+    System.out.println("\nAfter swapping without using a third variable:");
+    System.out.println("a = " + a);
+    System.out.println("b = " + b);
+  }
+}

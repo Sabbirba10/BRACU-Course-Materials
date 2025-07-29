@@ -1,0 +1,18 @@
+public class task12 {
+    public static void main(String[] args) {
+
+        int num1 = 2345;
+ 
+        int num2 = 2452;
+
+        int num3 = 4532;
+        
+        if (num1 == num2 && num2 == num3) {
+            System.out.println("All numbers are equal");
+        } else if (num1 != num2 && num1 != num3 && num2 != num3) {
+            System.out.println("All numbers are different");
+        } else {
+            System.out.println("Neither all are equal or different");
+        }
+    }
+}

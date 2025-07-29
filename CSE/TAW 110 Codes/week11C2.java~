@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class week11C2
+{
+//Access_Modifier static void/return_type method_name(Parameters)
+  public static int sumNumRec(int num){
+    if(num == 1){    //Base case
+      return 1;
+    }
+    else{               //recursive case
+      return num + sumNumRec(num-1);
+    }
+  }
+  public static int sumNum(int num){
+    int total = 0;
+    for(int i=1;i<=num;i++){
+      total += i;
+    }
+    return total;
+  }
+  public static void main(String[]args)
+  {
+    Scanner sc = new Scanner(System.in);  
+    System.out.println("Main method starts");
+    int result = sumNumRec(5);
+    System.out.println(result);
+    System.out.println("Main method ends");
+  }
+  
+//  public static String m1(){
+//    return "abc"+m2();
+//  }
+//  public static String m2(){
+//    return "xyz"+m3();
+//  }
+//  public static String m3(){
+//    return "def";
+//  }
+  
+  
+//  public static int square(int num){
+//    return num*num;
+//  }
+//  public static int sumOfSquare(int a, int b){
+//    int ans = square(a) + square(b);
+//    return ans;
+//  }
+  
+  
+}

@@ -1,0 +1,17 @@
+public class task19_prev {
+    public static void main(String[] args) {
+        int count = 0;
+        String s1 = "UAEU is the university of the future #2018";
+
+        for (int i = 0; i < s1.length(); i++) {
+            char ch = s1.charAt(i);
+            if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' ||
+                    ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                System.out.print(i + " ");  // Print idx of vowels
+                count++;
+            }
+        }
+
+        System.out.println("\n" + count);  // ekhane ha hoise print korar por por  ekta gap dewa lagto so that count printhoi
+    }
+}

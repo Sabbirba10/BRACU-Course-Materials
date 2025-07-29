@@ -1,0 +1,8 @@
+public class Task18 {
+    public static void main(String[] args) {
+        int studentId = 23221454;
+        int lastTwo = studentId%100;
+        int reversed = (lastTwo%10)*10+(lastTwo/10);
+        System.out.println("Reversed last two digits: "+reversed);
+    }
+}

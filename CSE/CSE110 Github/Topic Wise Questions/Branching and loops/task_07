@@ -1,0 +1,27 @@
+public class task7 {
+  public static void main(String[] args) {
+    int studentId =16101307;
+    
+    int year = studentId / 1000000;
+    int sessionPart = (studentId / 100000) % 10;
+    String s = Integer.toString(sessionPart);
+    
+    
+    String session;
+    if (s.equals("1")) {
+      session = "Spring";
+    } else if (s.equals("2")) {
+      session = "Fall";
+    } else if (s.equals("3")) {
+      session = "Summer";
+    } else {
+      session = "Unknown session";
+    }
+    
+    
+System.out.println("Student joined BRAC in " + session + " " + year);
+    
+    
+    
+  }
+}

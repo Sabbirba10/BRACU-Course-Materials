@@ -1,0 +1,9 @@
+public class Task19 {
+    public static void main(String[] args) {
+        double side = 5;
+        double area = (3*Math.sqrt(3)*side*side)/2;
+        double perimeter = 6*side;
+        System.out.println("Hexagon Area: "+area);
+        System.out.println("Hexagon Perimeter: "+perimeter);
+    }
+}

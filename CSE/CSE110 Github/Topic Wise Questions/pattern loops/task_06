@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class pattern4_3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+
+        for (int rc = 0; rc < row; rc++) {
+            for (int sC = 1; sC <= row - rc - 1; sC++) {
+                System.out.print(" ");
+            }
+            for (int cc = 0; cc < rc; cc++) {
+                System.out.print((int) Math.pow(2, cc)+" ");
+            }
+            for (int cc = rc; cc >= 0; cc--) {
+                System.out.print((int) Math.pow(3, cc)+ " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+

@@ -1,0 +1,44 @@
+public class task2
+{
+     public  static  void  main( String[]args)
+    {
+    double area = circleArea(5);
+
+    System.out.printf("%.4f\n",area);
+
+    double volume=sphereVolume(5);
+
+    System.out.printf("%.4f\n",volume);
+
+
+    findSpace(5,"square");
+    }
+
+    public static double circleArea(int n){
+        //double newa lagbe
+        return (Math.PI * n*n);
+    }
+
+    public static double sphereVolume(int n) {
+        return (4* Math.PI * n*n*n)/3;
+    }
+
+    public static void findSpace(int n, String s1) {
+        if(s1.equals("circle")) {
+            double area = circleArea(5);
+            System.out.printf("%.4f\n",area);
+        }
+
+        else if(s1.equals("sphere")) {
+            double volume=sphereVolume(5);
+            System.out.printf("%.4f\n",volume);
+        }
+
+
+        else{
+            System.out.println("wrong parameter");
+        }
+    }
+
+
+}

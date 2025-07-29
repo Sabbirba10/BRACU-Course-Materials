@@ -1,0 +1,11 @@
+import java.util.Scanner;
+ public class Task1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num1 = input.nextInt();
+        int num2 = input.nextInt();
+        int num3 = input.nextInt();
+        int largest = Math.max(num1,Math.max(num2,num3));
+        System.out.println("Largest number: "+largest);
+    }
+}

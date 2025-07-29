@@ -1,0 +1,345 @@
+
+
+Lab05 - CSE110_JAVA
+
+Classwork###################################################################################################
+
+Task02------------------------------------------------------------------------------
+
+class Main {
+    public static void main(String[] args) {
+        int N=5;
+        int prime_count=0;
+        int num =1;
+    while (prime_count<N){
+        int count = 0;
+        for (int i=1; i<=num; i++){
+            if (num%i==0){
+                count++;
+            }
+        }
+        if (count==2){
+            prime_count++;
+            System.out.println(num+" is a Prime number.");
+        }
+        num++;
+    }
+        
+    }
+}
+
+
+
+Alter Task02-------------------
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of prime numbers you want to print: ");
+        int N = scanner.nextInt();
+        scanner.close();
+
+        int count = 0;
+        int number = 2;
+
+        while (count < N) {
+            boolean isPrime = true;
+            for (int i = 2; i <number; i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                System.out.println(number);
+                count++;
+            }
+            number++;
+        }
+        
+        
+    }
+}
+
+
+
+
+
+Alter Task01 using both for loop--------------------------------------------------------------
+
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of prime numbers you want to print: ");
+        int N = scanner.nextInt();
+        scanner.close();
+
+        int number = 2;
+
+        for (int count=0; count < N; number++) {
+            boolean isPrime = true;
+            for (int i = 2; i <number; i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                System.out.println(number);
+                count++;
+            }
+        }
+        
+        
+    }
+}
+
+
+
+
+
+
+
+Task03---------------------------------------------------------------------------
+
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the starting number: ");
+        int start = scanner.nextInt();
+        System.out.print("Enter the ending number: ");
+        int end = scanner.nextInt();
+        scanner.close();
+
+        System.out.println("Armstrong numbers:");
+        for (int number = start; number <= end; number++) {
+            int originalNumber = number;
+            int n = 0;
+            int result = 0;
+
+            // Count number of digits
+            while (originalNumber != 0) {
+                originalNumber /= 10;
+                ++n;
+            }
+
+            originalNumber = number;
+
+            // Calculate sum of nth power of individual digits
+            while (originalNumber != 0) {
+                int remainder = originalNumber % 10;
+                result += Math.pow(remainder, n);
+                originalNumber /= 10;
+            }
+
+            // Check if the number is Armstrong
+            if (result == number) {
+                System.out.println(number);
+            }
+        }
+    }
+}
+
+
+
+
+Class Evaluation#######################################################################
+
+
+
+Task01----------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input range
+        System.out.print("Enter number 'N': ");
+        int N= scanner.nextInt();
+        int sum=0;
+        for (int i=1; i <=N; i++) {
+          for (int j=1; j<=i; j++) {
+            sum-=j;
+          }
+        }
+        System.out.println("The value of y: "+sum);
+
+        
+        
+        scanner.close();
+    }
+}
+
+
+
+
+Task02-----------------------------------------------------------------------
+
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input range
+        while (true) {
+          System.out.print("Enter number 'N': ");
+          int N= scanner.nextInt();
+          if (N%2==0) {
+            int count=0;
+            for (int i=1; i<=N; i++) {
+              if (N%i==0) {
+                count += 1;
+              }
+            }
+            System.out.println(N+" has "+count+" divisors");
+          }
+          else{
+            System.out.println(N+" is an odd number. So, now stop. Run again!");
+            break;
+          }
+        }
+        
+       
+    }
+}
+
+
+
+
+
+Homework#############################################################################
+
+
+Task05-----------------------------------------------------------------
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of perfect numbers to print: ");
+        int N = scanner.nextInt();
+        scanner.close();
+
+        int count = 0;
+        int number = 2;
+
+        System.out.println("Perfect numbers:");
+        for (; count < N; number++) {
+            int sum = 0;
+            for (int i = 1; i < number; i++) {
+                if (number % i == 0) {
+                    sum += i;
+                }
+            }
+            if (sum == number) {
+                System.out.println(number);
+                count++;
+            }
+        }
+        
+        
+    }
+}
+
+
+
+
+
+
+Task06------------------------------------------------------------------------------
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Start: ");
+        int start = scanner.nextInt();
+        System.out.print("Stop: ");
+        int stop = scanner.nextInt();
+        scanner.close();
+
+        for (int i = start; i <= stop; i++) {
+            System.out.println("Times Table of " + i + ":");
+            for (int j = 1; j <= 10; j++) {
+                System.out.println(i + " x " + j + " = " + (i * j));
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+Task07-----------------------------------------------------------------------------------
+
+
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input range
+        System.out.print("Enter starting number (inclusive): ");
+        int start = scanner.nextInt();
+        System.out.print("Enter ending number (inclusive): ");
+        int end = scanner.nextInt();
+        
+        // Input divisor
+        System.out.print("Enter divisor: ");
+        int divisor = scanner.nextInt();
+        
+        
+        // Loop through each number in the range
+        for (int num = start; num <= end; num++) {
+          if (divisor==0 || start==end){
+          System.out.print("Divisor cannot be 0 OR start and ending cannot be same");
+          break;
+          }
+          int product = 1;
+          int temp = num;
+            
+          while (temp != 0) {
+            int digit = temp % 10;
+            product *= digit;
+            temp /= 10;
+          }
+          if (product % divisor == 0) {
+            System.out.print(product + " ");
+          }
+        }
+        
+        scanner.close();
+    }
+}

@@ -1,0 +1,26 @@
+public class task2b {
+  public static void main(String[] args) {
+    double n1=82;
+    
+    if (90<n1 && n1<100) {
+      System.out.println("Grade A");
+    }
+    else if (85<n1 && n1<89) {
+      System.out.println("Grade A-");
+    }
+    else if (70<n1 && n1<84) {
+      System.out.println("Grade B");
+    }
+    else if (57<n1 && n1<69) {
+      System.out.println("Grade C");
+    }
+    else if (50<n1 && n1<56) {
+      System.out.println("Grade D");
+    }
+    else if (n1<50) {
+      System.out.println("Grade F");
+    }
+    
+    
+  }
+}

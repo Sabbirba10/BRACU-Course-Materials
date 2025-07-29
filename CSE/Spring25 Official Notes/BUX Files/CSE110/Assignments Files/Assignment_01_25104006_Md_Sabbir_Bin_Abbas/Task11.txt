@@ -1,0 +1,14 @@
+public class Task11 {
+    public static void main(String[] args) {
+        int num1 = 10,
+            num2 = 20;
+        System.out.println("Sum: "+ (num1+num2));
+        System.out.println("Product: "+ (num1*num2));
+        System.out.println("Division: "+ (num1/num2));
+        double d1 = 5.5, 
+               d2 = 2.2;
+        System.out.println("Double Sum: "+ (d1+d2));
+        String s1 = "Hello", s2 = "World";
+        System.out.println("Concatenation: "+ (s1+ " "+s2));
+    }
+}

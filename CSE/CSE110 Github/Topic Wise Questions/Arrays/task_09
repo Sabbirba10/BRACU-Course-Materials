@@ -1,0 +1,60 @@
+
+import java.util.Scanner;
+
+public class task9 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("N=");
+        int N = sc.nextInt();
+        int arr1[] = new int[N];
+
+
+
+        for (int i = 0; i < N; i++)
+        {
+            System.out.print("Enter a number: ");
+            arr1[i] = sc.nextInt();
+        }
+
+        System.out.println("Original Array:");
+        for (int i = 0; i < N; i++)
+
+        {
+            System.out.print(arr1[i] + " ");
+        }
+        System.out.println();
+
+        // Selection Sort in descending order
+        for (int y = 0; y < N - 1; y++)
+
+        {
+            int maxiumIndex = y;
+            for (int x = y + 1; x < N; x++)
+            {
+                if (arr1[x] > arr1[maxiumIndex])
+
+                {
+                    maxiumIndex = x;
+                }
+            }
+            // Swap the found maximum element with the first element
+            int temp = arr1[maxiumIndex];
+            arr1[maxiumIndex] = arr1[y];
+            arr1[y] = temp;
+        }
+
+        System.out.println("Sorted Array:");
+        for (int i = 0; i < N; i++)
+
+
+        {
+            System.out.print(arr1[i] + " ");
+        }
+        
+        System.out.println();
+
+        sc.close();
+    }
+}
+
+

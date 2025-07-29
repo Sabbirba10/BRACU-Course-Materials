@@ -1,0 +1,91 @@
+
+public class task10 {
+    public static void main(String[] args) {
+        int[] marks = {85, 90, 75, 44, 99};
+        String[] names = {"Bob", "Alice", "Max", "Marry", "Rosy"};
+
+        // we do bubble sort ekahne
+        for (int i = 0; i < marks.length - 1; i++)
+        {
+            for (int j = 0; j < marks.length - 1 - i; j++)
+            {
+                if (marks[j] > marks[j + 1])
+                {
+                    // Swapping here
+
+
+                    int tempM = marks[j];
+                    marks[j] = marks[j + 1];
+                    marks[j + 1] = tempM;
+
+
+
+                    // Swap corresponding names
+                    String tempN = names[j];
+                    names[j] = names[j + 1];
+                    names[j + 1] = tempN;
+                }
+            }
+        }
+
+
+        System.out.println("Sorted Array:");
+
+
+        for (int i = 0; i < marks.length; i++)
+        {
+            System.out.print(marks[i] + " ");
+        }
+
+
+        System.out.println();
+
+
+        for (int i = 0; i < names.length; i++)
+
+
+        {
+            System.out.print(names[i] + " ");
+        }
+
+        System.out.println();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+In this code, we begin with two arrays: one containing students' marks and the other their corresponding names.
+Using Bubble Sort, we sort the `marks` array in ascending order, ensuring to swap elements in the `names` array to maintain alignment
+ with their respective marks.
+ The outer loop iterates over the array, while the inner loop compares adjacent elements,
+ swapping them if they are out of order. Once sorted, both arrays are printed: the `marks` array displays
+ each student's mark in ascending order and the `names` array shows the corresponding names in the new order after sorting.
+  This way, after sorting, each name still corresponds to the correct mark.
+
+
+ */

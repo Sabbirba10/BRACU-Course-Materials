@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Task7 {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter limit: ");
+        int limit = sc.nextInt();
+        for (int i = 0; i <= limit; i++) {
+        if (i % 5 == 0 && i % 3 != 0) {
+     System.out.println(i);
+}
+        }
+    }
+}

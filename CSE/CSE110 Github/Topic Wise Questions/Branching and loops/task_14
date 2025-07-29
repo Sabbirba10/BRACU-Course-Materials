@@ -1,0 +1,12 @@
+public class task14 {
+    public static void main(String[] args) {
+      int start = -10;
+      int end = 20;
+        for (int i = start; i < end; i += 5) {
+            System.out.print(i + ",");
+        }
+        
+        System.out.println(end);
+ 
+        }
+    }

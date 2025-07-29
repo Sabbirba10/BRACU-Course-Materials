@@ -1,0 +1,52 @@
+public class task11 {
+    public static void main(String[] args) {
+        int amountToBePaid = 550;
+        int amountGiven = 520;
+
+        if (amountGiven > amountToBePaid) {
+            int change = amountGiven - amountToBePaid;
+            System.out.println("The returned amount is " + change + " taka");
+
+            if (change >= 100) {
+                int count = change / 100;
+                change %= 100;
+                System.out.println("100 taka note: " + count);
+            }
+            if (change >= 50) {
+                int count = change / 50;
+                change %= 50;
+                System.out.println("50 taka note: " + count);
+            }
+            if (change >= 20) {
+                int count = change / 20;
+                change %= 20;
+                System.out.println("20 taka note: " + count);
+            }
+            if (change >= 10) {
+                int count = change / 10;
+                change %= 10;
+                System.out.println("10 taka note: " + count);
+            }
+            if (change >= 5) {
+                int count = change / 5;
+                change %= 5;
+                System.out.println("5 taka note: " + count);
+            }
+            if (change >= 2) {
+                int count = change / 2;
+                change %= 2;
+                System.out.println("2 taka note: " + count);
+            }
+            if (change >= 1) {
+                int count = change / 1;
+                change %= 1;
+                System.out.println("1 taka note: " + count);
+            }
+        } else if (amountGiven < amountToBePaid) {
+            int amountNeeded = amountToBePaid - amountGiven;
+            System.out.println("Please pay " + amountNeeded + " taka more");
+        } else {
+            System.out.println("Exact amount received.");
+        }
+    }
+}

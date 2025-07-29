@@ -1,0 +1,250 @@
+//
+//
+//
+//
+//---TASK--01---------------------------------
+public class BrowserHistory {
+  public String [] arr;
+  public int count = 0;
+  
+  public BrowserHistory (int c) {
+    arr = new String [c];}
+  
+  public void showHistory () {
+    if (count==0) {
+      System.out.println("No web pages visited yet.");}
+    else {
+      System.out.println("Browser History:");
+      for (int i = 0; i<count; i++) {
+        System.out.println(arr[i]);}}}
+  
+  public void currentWeb () {
+    if (count==0) {
+      System.out.println("You have not visited any website yet!");}
+    else {
+      System.out.println("Current web page: "+arr[count-1]);}}
+  
+  public void visitWeb (String a) {
+    if (count==arr.length) {
+      System.out.println("History is full. Cannot visit "+a+" web page. ");}
+    else {
+      arr[count] = a;
+      count = count+1;
+      System.out.println("Visited: "+a);}}
+  
+  public void back () {
+    arr[count-1] = null;
+    count = count-1;}
+  
+}
+//
+//
+//
+//
+//---TASK--02---------------------------------
+public class CustomerService {
+  public String [] arr;
+  public int count = 0;
+  
+  public CustomerService (int c) {
+    arr = new String [c];}
+  
+  public void serveCustomer () {
+    if (count==0) {
+      System.out.println("No customers to serve");}
+    else {
+      System.out.println("Serving "+arr[0]);
+      for (int i = 1; i<count; i++) {
+        arr[i-1]=arr[i];
+        if (i==(count-1)) {
+          arr[i] = null;}}
+      count = count-1;}}
+  
+  public void addCustomer (String a) {
+    if (count==arr.length) {
+      System.out.println("Queue is full. Cannot add "+a);}
+    else {
+      arr[count] = a;
+      count = count+1;
+      System.out.println("Added: "+a);}}
+  
+}
+//
+//
+//
+//
+//---TASK--03---------------------------------
+public class Circle extends Shape {
+  public int radius;
+  
+  public void area () {
+    System.out.println("Area of Red Circle: "+(3.1416*radius*radius));}
+  
+}
+//
+//
+//
+//
+//---TASK--04---------------------------------
+public class Dog extends Animal {
+  public String name;
+  
+  public Dog () {
+    System.out.println("The dog says hello!");}
+  
+  public String getName () {
+    return name;}
+  
+  public void updateSound (String a) {
+    sound = a;}
+  
+}
+//
+//
+//
+//
+//---TASK--05--Tennis-------------------------------
+public class Tennis_Tournament extends Tournament {
+  public int num;
+  
+  public Tennis_Tournament (String a, int b) {
+    setName(a);
+    num = b;}
+  
+  public String detail () {
+    return "Tennis Tournament Name: "+getName()+"\nNumber of Players: "+num;}
+  
+}
+//
+//
+//
+//
+//---TASK--05--Cricket-------------------------------
+public class Cricket_Tournament extends Tournament {
+  public int num;
+  public String type;
+  
+  public Cricket_Tournament () {
+    num = 0;
+    type = "No type";}
+  
+  public Cricket_Tournament (String a, int b, String c) {
+    setName(a);
+    num = b;
+    type = c;}
+  
+  public String detail () {
+    return "Cricket Tournament Name: "+getName()+"\nNumber of Teams: "+num+"\nType: "+type;}
+  
+}
+//
+//
+//
+//
+//---TASK--06--Book-------------------------------
+public class Book extends Product {
+  public String isbn;
+  public String pub;
+  
+  public Book (int a, String b, int c, String d, String e) {
+    super (a, b, c);
+    isbn = d;
+    pub = e;}
+  
+  public String printDetail () {
+    return getIdTitlePrice()+" ISBN: "+isbn+" Publisher: "+pub;}
+  
+}
+//
+//
+//
+//
+//---TASK--06--CD-------------------------------
+public class CD extends Product {
+  public int dur;
+  public String band;
+  public String gen;
+  
+  public CD (int a, String b, int c, String d, int e, String f) {
+    super (a, b, c);
+    band = d;
+    dur = e;
+    gen = f;}
+  
+  public String printDetail () {
+    return getIdTitlePrice()+" Band: "+band+" Duration: "+dur+" minutes Genre: "+gen;}
+  
+}
+//
+//
+//
+//
+//---TASK--07---------------------------------
+public class CSEStudent extends Student {
+  public static int total = 0;
+  
+  public CSEStudent (String a, int b) {
+    super (a, b);
+    total = total + 1;}
+  
+  public static void details () {
+    System.out.println("Total CSE Students: "+total);
+    System.out.println("Available Lab Based Courses: ");
+    System.out.println("CSE110 CSE111 CSE220 CSE221");}
+  
+  public void addLabBasedCourse (String a) {
+    if (a.equals("CSE110")||a.equals("CSE111")||a.equals("CSE220")||a.equals("CSE221")) {
+      courses = courses+a+" ";}
+    else {
+      System.out.println("It is not a lab based course!");}}
+  
+}
+//
+//
+//
+//
+//---TASK--08--Player-------------------------------
+public class Player extends SportsPerson {
+  public int goal;
+  public int match;
+  public double ratio;
+  
+  public Player (String a,String b,String c,int d,int e) {
+    super (a, b, c);
+    goal = d;
+    match = e;
+    earningPerMatch = (goal*1000) + (match*10);}
+  
+  public void calculateRatio () {
+    ratio = goal/(match*1.0);}
+  
+  public void printDetails () {
+    int a = (int) earningPerMatch;
+    System.out.println(getNameTeam());
+    System.out.println("Team Role: "+role);
+    System.out.println("Total Goal: "+goal+", Total Played: "+match);
+    System.out.println("Goal Ratio: "+ratio);
+    System.out.println("Match Earning: "+a+"k");}
+  
+}
+//
+//
+//
+//
+//---TASK--08--Manager-------------------------------
+public class Manager extends SportsPerson {
+  public int win;
+  
+  public Manager (String a,String b,String c,int d) {
+    super (a, b, c);
+    win = d;
+    earningPerMatch = win*1000;}
+  
+  public void printDetails () {
+    int a = (int) earningPerMatch;
+    System.out.println(getNameTeam());
+    System.out.println("Team Role: "+role);
+    System.out.println("Total Win: "+win);
+    System.out.println("Match Earning: "+a+"k");}
+  
+}

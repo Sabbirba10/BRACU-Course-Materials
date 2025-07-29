@@ -1,0 +1,216 @@
+// Task 1
+import java.util.Scanner;
+
+public class q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt(); // input
+
+        if (num % 7 == 0 && num % 5 == 0) { // divisible by both 5 and 7
+            System.out.println("Divisible by Both");
+        } else if (num % 5 == 0) { // divisible by 5 only
+            System.out.println("Invalid: Divisible by 5 only");
+        } else if (num % 7 == 0) { // divisible by 7 only
+            System.out.println("Invalid: Divisible by 7 only");
+        } else {
+            System.out.println("No");
+        }
+        sc.close();
+    }
+}
+
+// Task 2
+import java.util.Scanner;
+
+public class q2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter payment: ");
+        int num = sc.nextInt();
+
+        System.out.print("Enter age: ");
+
+        if (num < 0) { // payment amount for payable money can't be negative
+            System.out.println("Invalid payment amount");
+        }
+        int age = sc.nextInt();
+        if (age < 18) { // age is less than 18
+            System.out.println("You are not eligible to pay tax");
+        } else if (num < 10000) {
+            System.out.println("Your tax ammount is 0 TK");
+        } else if (num >= 10000 && num <= 20000) {
+            System.out.println("Your tax ammount is " + (num * 5 / 100) + " TK"); // Calculate tax at 5%
+        } else if (num > 20000) {
+            System.out.println("Your tax ammount is " + (num * 10 / 100) + " TK"); // tax at 10%
+        }
+        sc.close();
+    }
+}
+
+// Task 3
+import java.util.Scanner;
+
+public class q3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter 3 float number: ");
+        float num1 = sc.nextFloat(); // 1st number
+
+        System.out.print("Enter 2nd float number: "); // 2nd number
+        float num2 = sc.nextFloat();
+
+        System.out.print("Enter 3rd float number: "); // 3rd number
+        float num3 = sc.nextFloat();
+
+        if (num1 > num2 && num1 > num3) { // num1 is the maximum
+            System.out.println("Maximum number is: " + num1);
+
+        } else if (num2 > num1 && num2 > num3) { // num2 is the maximum
+            System.out.println("Maximum number is: " + num2);
+
+        } else { // num3 is the maximum
+            System.out.println("Maximum number is: " + num3);
+        }
+
+        if (num1 < num2 && num1 < num3) { // num1 is the minimum
+            System.out.println("Minimum number is: " + num1);
+
+        } else if (num2 < num1 && num2 < num3) { // num2 is the minimum
+            System.out.println("Minimum number is: " + num2);
+        } else { // num3 is the minimum
+            System.out.println("Minimum number is: " + num3);
+        }
+        sc.close();
+    }
+}
+
+// Task 4
+import java.util.Scanner;
+
+public class q4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter side 1: ");
+        int a = sc.nextInt(); // 1st side
+
+        System.out.print("Enter side 2: ");
+        int b = sc.nextInt(); // 2nd side
+
+        System.out.print("Enter side 3: ");
+        int c = sc.nextInt(); // 3rd side
+
+        if (a == b && b == c) { // if all sides are equal, it is an Equilateral triangle
+            System.out.println("This is a Equilateral triangle");
+        } else if (a == b || b == c || a == c) { // if any two sides are equal, it is an Isosceles triangle
+            System.out.println("This is a Isosceles triangle");
+        } else { // if no sides are equal, it is a Scalene triangle
+            System.out.println("This is a Scalene triangle");
+        }
+        sc.close();
+    }
+}
+
+// Task 5
+import java.util.Scanner;
+
+public class q5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the amount the customer need to pay(TAKA): ");
+        int pay = sc.nextInt(); // amount to be pay
+
+        System.out.print("Enter the amount that customer gave(TAKA): ");
+        int given = sc.nextInt(); // amount given by the customer
+
+        if (given > pay) { // amount given is greater than the amount to be paid
+            int change = given - pay; // change to be returned
+            System.out.println("The returned amount is " + change + " taka.");
+
+            int count100 = change / 100; // number of 100 taka notes
+            System.out.println("100 taka note: " + count100);
+            change %= 100; // remaining amount after giving 100 taka notes
+
+            int count50 = change / 50;
+            System.out.println("50 taka note: " + count50);
+            change %= 50;
+
+            int count20 = change / 20;
+            System.out.println("20 taka note: " + count20);
+            change %= 20;
+
+            int count10 = change / 10;
+            System.out.println("10 taka note: " + count10);
+            change %= 10;
+
+            int count5 = change / 5;
+            System.out.println("5 taka coin: " + count5);
+            change %= 5;
+
+            int count2 = change / 2;
+            System.out.println("2 taka coin: " + count2);
+            change %= 2;
+
+            int count1 = change;
+            System.out.println("1 taka coin: " + count1);
+
+        } else if (given < pay) { // amount given is less than the amount to be paid
+            System.out.println("Please pay " + (pay - given) + " taka more."); // minus to additional amount needed
+        } else {
+            System.out.println("The returned amount is 0 taka.");
+        }
+        sc.close();
+    }
+}
+
+// Task 6
+import java.util.Scanner;
+
+public class q5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the amount the customer need to pay(TAKA): ");
+        int pay = sc.nextInt(); // amount to be pay
+
+        System.out.print("Enter the amount that customer gave(TAKA): ");
+        int given = sc.nextInt(); // amount given by the customer
+
+        if (given > pay) { // amount given is greater than the amount to be paid
+            int change = given - pay; // change to be returned
+            System.out.println("The returned amount is " + change + " taka.");
+
+            int count100 = change / 100; // number of 100 taka notes
+            System.out.println("100 taka note: " + count100);
+            change %= 100; // remaining amount after giving 100 taka notes
+
+            int count50 = change / 50;
+            System.out.println("50 taka note: " + count50);
+            change %= 50;
+
+            int count20 = change / 20;
+            System.out.println("20 taka note: " + count20);
+            change %= 20;
+
+            int count10 = change / 10;
+            System.out.println("10 taka note: " + count10);
+            change %= 10;
+
+            int count5 = change / 5;
+            System.out.println("5 taka coin: " + count5);
+            change %= 5;
+
+            int count2 = change / 2;
+            System.out.println("2 taka coin: " + count2);
+            change %= 2;
+
+            int count1 = change;
+            System.out.println("1 taka coin: " + count1);
+
+        } else if (given < pay) { // amount given is less than the amount to be paid
+            System.out.println("Please pay " + (pay - given) + " taka more."); // minus to additional amount needed
+        } else {
+            System.out.println("The returned amount is 0 taka.");
+        }
+        sc.close();
+    }
+}

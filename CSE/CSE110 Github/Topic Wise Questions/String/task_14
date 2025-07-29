@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class task15_prev {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the first string:");
+        String s1 = sc.nextLine();
+
+        System.out.println("Enter the second string:");
+        String s2 = sc.nextLine();
+
+        int count = 0;
+        int s2Length = s2.length();
+
+        for (int i = 0; i <= s1.length() - s2Length; i++) {
+            boolean match = true;
+            for (int j = 0; j < s2Length; j++) {
+                if (s1.charAt(i + j) != s2.charAt(j)) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) {
+                count++;
+            }
+        }
+
+        System.out.println("Occurrence: " + count + " times");
+        sc.close();
+    }
+}
+
+
+/* i+j korsi cuz   i dhoro 1 ar j er maxm hocche 3   so amra 4
+character match korbo 3 ta character er sathe
+
+jodi na mile tahole match korena (match is false)
+jodi korto tahole count++
+
+ekhane aro jinish ase je amra match korle count++ korinai ken etc
+
+ */

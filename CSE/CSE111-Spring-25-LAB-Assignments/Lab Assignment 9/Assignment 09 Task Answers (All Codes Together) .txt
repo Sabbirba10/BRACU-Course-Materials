@@ -1,0 +1,243 @@
+//
+//
+//
+//
+//--Task-01------------------------------------
+public class Pokemon {
+  public String name;
+  
+  public Pokemon (String a) {
+    name = a;}
+  
+  public void attack() {
+    System.out.println(name+" attacks with a basic move!");}
+  
+  public void attack(String a) {
+    System.out.println(name+" uses "+a+"!");}
+  
+  public void attack(String a, int b) {
+    System.out.println(name+" uses "+a+" with power "+b+"!");}
+}
+//
+//
+//
+//
+//--Task-02--Mango----------------------------------
+public class Mango extends Fruit {
+  public Mango () {
+    super(true, "Mango");}
+  
+  public String toString () {
+    return "Mangos are bad for you";}
+}
+//
+//
+//
+//
+//--Task-02--Jackfruit----------------------------------
+public class Jackfruit extends Fruit {
+  public Jackfruit () {
+    super(false, "Jackfruit");}
+  
+  public String toString () {
+    return "Jackfruits are good for you";}
+}
+//
+//
+//
+//
+//--Task-03--CSE111Student----------------------------------
+public class CSE111Student extends Student {
+  public String msg = "I love Java Programming";
+  
+  public String shout(){
+    return msg;}
+}
+//
+//
+//
+//
+//--Task-03--CSEStudent----------------------------------
+public class CSEStudent extends Student {
+  public String msg = "I want to transfer to CSE";
+  
+  public String shout(){
+    return msg;}
+}
+//
+//
+//
+//
+//--Task-04--PlatinumCard----------------------------------
+public class PlatinumCard extends CreditCard {
+  public PlatinumCard (String a, String b) {
+    super(a, b, 100);}
+  
+  public void spendCash (int a) {
+    System.out.println("Previous Reward Points: "+rewardPoints);
+    rewardPoints = rewardPoints + ((a/100)*2);
+    System.out.println("Reward points after spending "+a+" taka: "+rewardPoints);}
+}
+//
+//
+//
+//
+//--Task-04--SignatureCard----------------------------------
+public class SignatureCard extends CreditCard {
+  public SignatureCard (String a, String b) {
+    super(a, b, 200);}
+  
+  public void spendCash (int a) {
+    System.out.println("Previous Reward Points: "+rewardPoints);
+    rewardPoints = rewardPoints + ((a/100)*4);
+    System.out.println("Reward points after spending "+a+" taka: "+rewardPoints);}
+  
+  public void cardDetails () {
+    super.cardDetails();
+    System.out.println("Possible Number of Companions for Lounge: 5");}
+}
+//
+//
+//
+//
+//--Task-05--Character--Parent--------------------------------
+public class Character {
+public String name;
+public int level;
+public Character(String name, int level) {
+this.name = name;
+this.level = level;
+}
+public void specialMove() {
+System.out.println("Character uses a generic move.");
+}
+// Override the .equals() method
+  public boolean equals (Character a) {
+    if ((this.name == a.name) && (this.level == a.level)) {
+      return true;}
+    else {
+      return false;}}
+}
+//
+//
+//
+//
+//--Task-05--Warrior--child--------------------------------
+public class Warrior extends Character {
+  public Warrior (String a, int b) {
+    super(a, b);}
+  
+  public void specialMove() {
+    System.out.println(name+" performs a heavy sword slash!");}
+}
+//
+//
+//
+//
+//--Task-05--Paladin--subclass--------------------------------
+public class Paladin extends Warrior {
+  public Paladin (String a, int b) {
+    super(a, b);}
+  
+  public void specialMove() {
+    System.out.println(name+" unleashes a holy strike!");}
+}
+//
+//
+//
+//
+//--Task-05--Mage--child--------------------------------
+public class Mage extends Character {
+  public Mage (String a, int b) {
+    super(a, b);}
+  
+  public void specialMove() {
+    System.out.println(name+" casts a powerful fireball!");}
+}
+//
+//
+//
+//
+//--Task-06--Bike----------------------------------
+public class Bike extends Vehicle {
+  public String model;
+  public int door;
+  public boolean sidecar;
+  
+  public Bike (String a, String b, int c, int d, boolean e){
+    super(a, c);
+    super.setWheels(d);
+    model = b;
+    sidecar = e;}
+  
+  public String toString (){
+    return "Bike "+super.toString()+", Model: "+model+", SideCar: "+sidecar;}
+  
+  public void doAWheelie () {
+    if (sidecar==false) {
+      System.out.println(getBrand()+":"+model+" is doing Wheelie!!");}
+    else {
+      System.out.println("Wheelie Failed. "+getBrand()+":"+model+" has SideCar");}}
+}
+//
+//
+//
+//
+//--Task-06--Car----------------------------------
+public class Car extends Vehicle {
+  public String model;
+  public int door;
+  public boolean ai;
+  
+  public Car (String a, String b, int c, int d, int e, boolean f){
+    super(a, c);
+    super.setWheels(e);
+    model = b;
+    door = d;
+    ai = f;}
+  
+  public String toString (){
+    return "Car "+super.toString()+", Model: "+model+", Doors: "+door+", AI: "+ai;}
+  
+  public void startAutoPilot () {
+    if (ai==false) {
+      System.out.println(getBrand()+":"+model+" has NO AutoPilot");}
+    else {
+      System.out.println(getBrand()+":"+model+" AutoPilot Started");}}
+}
+//
+//
+//
+//
+//--Task-06--Garage----------------------------------
+public class Garage {
+  public Car [] cars;
+  public Bike [] bikes;
+  public int carcount = 0;
+  public int bikecount = 0;
+  
+  public Garage (int a, int b){
+    cars = new Car [a];
+    bikes = new Bike [b];
+    System.out.println("Welcome to the Garage!");
+    System.out.println("Car Capacity: "+a);
+    System.out.println("Bike Capacity: "+b);}
+  
+  public void addVehicle(Vehicle a) {
+    if (a instanceof Car) {
+      Car b = (Car) a;
+      if (carcount==cars.length) {
+        System.out.println("Can't add more Cars! Capacity: "+cars.length);}
+      else {
+        cars[carcount] = b;
+        System.out.println("A "+b.getBrand()+" CAR has been added to the Garage");
+        carcount = carcount+1;}}
+    else {
+      Bike b = (Bike) a;
+      if (bikecount==bikes.length) {
+        System.out.println("Can't add more bikes! Capacity: "+bikes.length);}
+      else {
+        bikes[bikecount] = b;
+        System.out.println("A "+b.getBrand()+" BIKE has been added to the Garage");
+        bikecount = bikecount+1;}}}
+}

@@ -1,0 +1,67 @@
+//task 2.1-2.3
+public class Task11{
+  public static void main (String[] args) {
+    // question 2.1
+    int a = 10;
+    System.out.println("Integer Variable 1: " +a);
+    // question 2.2
+    int b= 20;
+    System.out.println("Integer Variable 2: " + b);
+    int sum =a+b;
+    System.out.println("Sum of Integer Variables: " + sum);
+    // question 2.3
+    int product = a*b;
+    System.out.println("Product of Integer Variables: " + product);
+    int division= a/b;
+    System.out.println("Division of Integer Variables: " + division);
+    
+    
+    
+  }
+}
+
+  
+
+//task 2.4
+public class task11_part2 {
+  public static void main (String[] args) {
+    double a = 10;
+    double b= 20;
+    System.out.println(a);
+    System.out.println(a+b);
+    System.out.println(a*b);
+    System.out.println(a/b);
+  }
+}
+
+
+
+
+
+//task 2.5
+public class task11_part3 {
+  public static void main (String[] args) {
+    int x =10;
+    int y= 20;
+    double a = 10;
+    double b= 20;
+    System.out.println(a);
+    System.out.println(x);
+    System.out.println(a+x);
+    System.out.println(a*x);
+    System.out.println(a/x);
+  }
+}
+
+//task 2.6
+public class task11_part4 {
+  public static void main (String[] args) {
+    String a ="hello ";
+    String c= "world";
+    int b= 20;
+    System.out.println(a); //print string
+    System.out.println(a+c); //string + string
+    System.out.println(a+b); //Mixing integer with String
+    System.out.println(b+a); //Mixing integer with String
+  }
+}

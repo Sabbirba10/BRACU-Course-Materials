@@ -1,0 +1,11 @@
+public class Task20 {
+    public static void main(String[] args) {
+        double a = 4.5,
+               b = 9.5;
+        double c = Math.sqrt(a*a+b*b);
+        System.out.println("SinA: "+(a/c));
+        System.out.println("CosA: "+(b/c));
+        System.out.println("SinB: "+(b/c));
+        System.out.println("CosB: "+(a/c));
+    }
+}

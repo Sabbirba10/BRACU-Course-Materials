@@ -1,0 +1,76 @@
+public class task5 {
+    public static void main(String[] args){
+         showDots(3);
+         System.out.println();
+         show_palindrome(2);
+         System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        showDiamond(3);
+    }
+
+    public static void showDiamond(int n) {
+        int s=1;
+        int x = n;
+        for (int rC = 0; rC <n ; rC++) {
+                showDots(x-1);
+             show_palindrome(s);
+                showDots(x-1);
+                x--;
+                s++;
+            System.out.println();
+        }
+         s=n-1;
+         x=1;
+        for (int rC = 0; rC <n-1  ; rC++) {
+            showDots(x);
+            show_palindrome(s);
+            showDots(x);
+            x++;
+            s--;
+            System.out.println();
+        }
+    }
+
+    public static void showDots(int n)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            System.out.print(".");
+        }
+    }
+
+    public static void show_palindrome(int n) {
+        for (int i = 1; i <= n; i++) {
+            System.out.print(i);
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            System.out.print(i);
+        }
+    }
+}
+
+/*
+public static void showDiamond(int n) {
+        // Upper part of the diamond
+        for (int i = 1; i <= n; i++) {
+            showDots(n - i);
+            show_palindrome(i);
+            showDots(n - i);
+            System.out.println();
+        }
+        // Lower part of the diamond
+        for (int i = n - 1; i >= 1; i--) {
+            showDots(n - i);
+            show_palindrome(i);
+            showDots(n - i);
+            System.out.println();
+        }
+    }
+ */
+
+

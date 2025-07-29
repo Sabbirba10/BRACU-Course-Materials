@@ -1,0 +1,17 @@
+public class task20 {
+    public static void main(String[] args) {
+        double a = 4.5;
+        double b = 9.5;
+        double c = Math.sqrt(a * a + b * b);
+        
+        double sinA = a / c;
+        double cosA = b / c;
+        double sinB = b / c;
+        double cosB = a / c;
+
+        System.out.printf("Sin A= %.3f\n", sinA);
+        System.out.printf("Cos A= %.3f\n", cosA);
+        System.out.printf("Sin B= %.3f\n", sinB);
+        System.out.printf("Cos B= %.3f\n", cosB);
+    }
+}

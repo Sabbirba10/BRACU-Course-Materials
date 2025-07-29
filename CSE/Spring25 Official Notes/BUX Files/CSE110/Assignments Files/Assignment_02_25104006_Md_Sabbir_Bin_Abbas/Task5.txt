@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Task5 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num = input.nextInt();
+        if (num < 0) {
+            System.out.println("Number is negative");
+        } else if (num == 0) {
+            System.out.println("Number is zero");
+        } else if (num % 2 == 0) {
+            System.out.println("Number is positive and even");
+        } else {
+            System.out.println("Number is positive and odd");
+        }
+    }
+}

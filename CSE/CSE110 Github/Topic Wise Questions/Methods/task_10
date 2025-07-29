@@ -1,0 +1,27 @@
+public class task10 {
+    public static void main(String[] args) {
+        String S = "abababa", S1 = "aba", S2 = "a", S_modified = "";
+
+        for (int i = 0; i < S.length(); ) {
+            boolean match = true;
+            // Check if S1 matches the substring of S starting at i
+            for (int j = 0; j < S1.length(); j++) {
+                if (i + j >= S.length() || S.charAt(i + j) != S1.charAt(j)) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) {
+                // Append S2 if S1 is found
+                S_modified += S2;
+                i += S1.length(); // Skip the length of S1
+            } else {
+                // Append the current character if no match
+                S_modified += S.charAt(i);
+                i++; // Move to the next character
+            }
+        }
+
+        System.out.println(S_modified);
+    }
+}

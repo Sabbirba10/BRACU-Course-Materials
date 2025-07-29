@@ -1,0 +1,48 @@
+
+import java.util.Scanner;
+public class task9 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter  password:");
+    String s1 = sc.nextLine();
+    
+    
+    boolean UpperCase = false;
+    boolean LowerCase = false;
+    boolean digits = false;
+    boolean SpecialCharacters = false;
+    
+    
+    if (s1.length() < 8 ){
+      return;
+    }
+    
+    for (int i = 0; i < s1.length(); i++)
+    {
+      char letter = s1.charAt(i);
+      if(letter >= 'A' && letter <= 'Z')
+      {
+        UpperCase = true;
+      }
+      else if(letter >= 'a' && letter <= 'z')
+      {
+        LowerCase = true;
+      }
+      else if(letter >= '0' && letter <= '9')
+      {
+        digits = true;
+      }
+      else
+      {
+        SpecialCharacters = true;
+      }
+    }
+    if(UpperCase && LowerCase && digits &&
+       SpecialCharacters){
+      System.out.println("True");
+    }
+    else{
+      System.out.println("False");
+    }
+  }
+}

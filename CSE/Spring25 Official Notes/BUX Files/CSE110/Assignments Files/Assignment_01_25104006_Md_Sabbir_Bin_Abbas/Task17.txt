@@ -1,0 +1,9 @@
+public class Task17 {
+    public static void main(String[] args) {
+        int a = 2, 
+          b = 5, 
+          c = 8;
+        int d = (a*b)+(b*c)+(c*a);
+        System.out.println("Value of d: "+d);
+    }
+}

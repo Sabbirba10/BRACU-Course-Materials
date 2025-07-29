@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class Task13 {
+    public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.println("Enter an integer: ");
+     int numDigits = sc.nextInt();
+     int digitCount = (int) Math.log10(numDigits) + 1;
+     System.out.println("Total digits = " + digitCount);
+    }
+}

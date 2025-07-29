@@ -1,0 +1,9 @@
+public class task14 {
+  public static void main(String[] args) {
+    double inches = 1000.0; // this is the number of inches
+    double value_of_1_inch = 0.0254;   // Conversion from inches to meters
+    double meters = inches * value_of_1_inch; // Convert inches to meters
+    System.out.printf("Given value for inches: %.2f \n", inches);
+    System.out.printf("Converted value in meters: %.2f \n", meters);
+  }
+}

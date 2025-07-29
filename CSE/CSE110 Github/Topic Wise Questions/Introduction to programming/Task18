@@ -1,0 +1,10 @@
+public class task18 {
+  public static void main(String[] args) {
+        int student_ID = 23221454;
+        int lastTwoDigits = student_ID % 100;       // get last 2 digit
+        int right_Digit = lastTwoDigits % 10;        //get the right digit of 2 digits
+        int left_digit = lastTwoDigits / 10;      // Second last digit 
+
+        System.out.println("The two digits in reverse order are: " +right_Digit + ", " + left_digit);
+    }
+}

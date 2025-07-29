@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class pattern2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int r = sc.nextInt();
+
+        for (int rC = 1; rC <= r; rC++) {
+            for (int sC = 1; sC <= (r - rC); sC++) {
+                System.out.print(" ");
+            }
+            for (int cC = 1; cC <= rC; cC++) {
+                System.out.print(cC);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// we fuck with the column prinitng jeta inner hoi always.
+// Then amra row re outer loop e rakhi
+
+
+
+
+// import java.util.Scanner;
+//
+//public class pattern2{
+//    public static void main(String [] args){
+//
+//        Scanner sc = new Scanner (System.in);
+//        int row = sc.nextInt();
+//
+//        for ( int rowCount = 1; rowCount <= row ; rowCount++){
+//            for ( int spaceCount = 1 ;spaceCount <= row - rowCount;spaceCount++){
+//                System.out.print(" ");
+//            }
+//
+//            for( int columnCount = 1;columnCount <= rowCount ;columnCount++){
+//                System.out.print(columnCount);
+//            }
+//            System.out.println();
+//        }
+//    }
+//}

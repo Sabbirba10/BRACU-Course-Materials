@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class task18 {
+    public static void main(String[] args) {
+        int[] arr1 = {2, 4, 3, 7, 1, 5};
+        int sum = 6; // Correct sum based on the task description
+        System.out.print("Pairs: ");
+
+        for (int i = 0; i < arr1.length - 1; i++) {
+            for (int j = i + 1; j < arr1.length; j++) {
+                if (arr1[i] + arr1[j] == sum) {
+                    System.out.print("{" + arr1[i] + ", " + arr1[j] + "} ");
+                    // Print the array when the sum is found
+                }
+            }
+        }
+    }
+}
+
+
+/*
+notice  i=0   i<l-2   j=i+1 we give this becuz so jokhon i last element hobe, j=i+1 hobe jeta out of bounds
+also x o jehetu ache  so max i can go be 3rd last element so j can check till 2nd last and x last
+NOTICE WE CANT DO THIS ULTA JE i <l  x<l-2  nahole i toh l-1 hobe, x hobe l+2 jeta impossible
+
+ */

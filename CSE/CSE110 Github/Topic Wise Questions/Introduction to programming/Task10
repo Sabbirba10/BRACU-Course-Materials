@@ -1,0 +1,18 @@
+public class Task10{
+  public static void main (String[]args){
+    int hungry=34; //valid because it starts with a letter and contains only letters
+//    int 2AB =34; //invalid as it cannot start with a digit. This identifier starts with '2'.
+//    int 312.2 = 34; //invalid as it it contains a decimal point. 
+    int MOBILE = 34; //valid as it starts with a letter and contains only letters
+//    int "Ans" =34; //invalid because it is enclosed in double quotes, making it a string
+    int $30 = 34; //valid identifier as identifiers can start with a dollar sign and can include digits after the first character
+//    int Yes/No =34; //invalid because it contains a slash, which is not allowed in identifiers
+//    int student-id =34; // invalid because it contains a hyphen as identifiers can only use letters digits underscores, or dollar signs
+//    int A+3 =34; //invalid because it contains a plus sign not allowed in identifiers
+//    int ‘X’ =34; //invalid because it is enclosed in single quotes making it character
+//    int return =34; //invalid as return is a reserved keyword
+    System.out.println("Value of hungry: " + hungry);
+    System.out.println("Value of MOBILE: " + MOBILE);
+    System.out.println("Value of $30: " + $30);
+  }
+} 

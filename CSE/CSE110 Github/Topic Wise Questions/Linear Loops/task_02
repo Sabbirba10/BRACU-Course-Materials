@@ -1,0 +1,23 @@
+public class task2{
+    public static void main(String[] args) {
+        int start = 18;
+        int increment = 9; 
+        int count = 6;
+
+        for (int i = 0; i < count; i++) {
+            
+            int value = start + (i * increment);
+            
+            
+            if (i % 2 == 1) {
+                value = -value; 
+            }
+            
+            System.out.print(value);
+            
+            if (i < count - 1) {
+                System.out.print(", ");
+            }
+        }
+    }
+}

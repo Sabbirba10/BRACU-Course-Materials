@@ -1,0 +1,66 @@
+// Task 1
+public class Task1 {
+    public static void main (String [] args ) {
+        int i = 3456789;
+        
+        int year = i / (60 * 24 * 365); // minutes to years
+        int day = (i % (60 * 24 * 365)) / (60 * 24); // remaining years to days
+
+        System.out.println(i +" minutes is approximately "+ year +" years and "+ day +" days");
+    }
+}
+
+
+// Task 2
+public class Task2 {
+    public static void main(String[] args) {
+    int a = 2;
+    int b = 5;
+    int c = 8;
+     
+    int d = ((2*b) * ((c-a)/3)) +7;
+    System.out.println("The value of d is "+ d);
+    }
+}
+
+// Task 3
+public class Task3 {
+public static void main(String[] args) {
+    int id = 25104006; // Sabbir Bin Abbas's student ID
+    int two = id % 100; // geting last two digit of my student id
+    int last1 = two % 10; // geting 6 - the last one digit 
+    int last2 = two / 10; // geting 0 - the second last one digit 
+
+    System.out.println("2 rightmost digits of my student ID are "+ last1 +" and "+ last2);
+    }
+}
+
+// Task 4
+public class Task4 {
+public static void main(String[] args) {
+    int a = 8; 
+    int b = 3; 
+
+    double h = a / 2; // side length of the hexagon
+    double c = Math.sqrt((h*h) + (b*b)); // calculating the height of the hexagon
+
+    double area = (((3 * Math.sqrt(3)) / 2) * (c*c)); // calculating the area
+    double circumference = 6 * c; // calculating the circumference
+ 
+    System.out.println("Area of the hexagon is "+area +" and circumference is "+ circumference);
+    }
+}
+
+// Task 5
+public class Task5 {
+public static void main(String[] args) {
+    double a = 4.5;
+    double b = 9.5;
+    double c = Math.sqrt(a*a+b*b); // calculating the hypotenuse
+
+    System.out.println("sin(A)= "+ (a/c));
+    System.out.println("cos(A)= "+ (b/c));
+    System.out.println("sin(B)= "+ (b/c));
+    System.out.println("cos(B)= "+ (a/c));
+    }
+}

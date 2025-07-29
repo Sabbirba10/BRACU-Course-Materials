@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class task12_prev {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter first string:");
+        String s1 = sc.nextLine();
+        System.out.println("Enter second string:");
+        String s2 = sc.nextLine();
+
+        String result = "";
+        int length = s1.length();
+
+        for (int i = 0; i < length; i += 2) {
+            result += s1.charAt(i);
+            result += s1.charAt(i + 1);
+            result += s2.charAt(i);
+            result += s2.charAt(i + 1);
+        }
+
+        System.out.println(result);
+        sc.close();
+    }
+}

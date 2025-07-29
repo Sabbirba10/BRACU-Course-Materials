@@ -1,0 +1,33 @@
+
+import java.util.Scanner;
+public class no11 {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Start: ");
+    int start = scanner.nextInt();
+    System.out.print("End: ");
+    int end = scanner.nextInt();
+    System.out.println("Armstrong numbers:");
+    for (int number = start; number <= end; number++) {
+      int okay = number;
+      int digits = 0;
+      while (okay > 0) {
+        okay /= 10;
+        digits++;
+      }
+      int sum = 0;
+      okay = number;
+      while (okay > 0) {
+        int digit = okay % 10;
+        sum += Math.pow(digit, digits);
+        okay /= 10;
+      }
+      if (sum == number) {
+        System.out.println(number);
+      }
+    }
+    scanner.close();
+  }
+}
+}
+

@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Task11 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int amountToPay = input.nextInt();
+        int amountGiven = input.nextInt();
+        int change = amountGiven - amountToPay;
+        if (change<0) {
+            System.out.println("Please pay "+(-change)+" taka more.");
+            return;}
+        System.out.println("The returned amount is "+change+" taka.");
+        int[] notes = {100, 50, 20, 10, 5, 2, 1};
+      for (int note : notes) {
+            System.out.println(note+" taka note/coin: "+change/note);
+            change%=note;
+        }
+    }
+}

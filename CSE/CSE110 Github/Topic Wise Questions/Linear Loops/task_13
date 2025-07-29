@@ -1,0 +1,29 @@
+public class task13 {
+    public static void main(String[] args) {
+        int number = 32768;
+        int count = 0;
+        int x = number;
+        
+        while (x != 0) {
+            x = x /10;
+            count++;
+        }
+        int numof0 = 1;
+        for (int i = 1; i < count; i++) {
+            numof0 *= 10; // 10^(count-1)
+        }
+       
+        x = number; 
+        
+        while (numof0 > 0) {
+            int digit = x / numof0;
+            System.out.print(digit + ","); 
+             
+           
+             x %= numof0;
+              numof0 /= 10;
+           
+        }
+
+    }
+}

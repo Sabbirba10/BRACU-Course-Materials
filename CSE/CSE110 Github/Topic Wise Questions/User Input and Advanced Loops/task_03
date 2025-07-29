@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class no3 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter an integar: ");
+    int num = sc.nextInt();
+     int posnum = 0;
+    int negnum = 0;
+   
+    for (int i = 1; i <= num; i++) {
+      System.out.print("Enter number " + i + ": ");
+      int x = sc.nextInt();
+      if (x < 0) {
+        negnum++;
+      } else {
+        posnum++;
+      }
+    }
+    System.out.println(posnum + " Non-negative Numbers ");
+    System.out.println(negnum + " Negative Numbers");
+  }
+} 
+

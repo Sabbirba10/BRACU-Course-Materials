@@ -1,0 +1,15 @@
+public class task3 {
+    public static void main(String[] args) {
+       int n = 36;
+       if(  n %5 ==0 && n %7 ==0) {
+         System.out.println("Divisible by both");
+       } else if ( n %5 ==0 && n %7 !=0) {
+         System.out.println("Divisible by 5 only");
+       } else if ( n %5 !=0 && n %7 ==0) {
+         System.out.println("Divisible by 7 only");
+       } else {
+          System.out.println("No");
+       }
+           
+    }
+}

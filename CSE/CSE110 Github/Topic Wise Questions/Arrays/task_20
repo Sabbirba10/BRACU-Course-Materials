@@ -1,0 +1,42 @@
+import java.util.Arrays;
+
+public class task20 {
+    public static void main(String[] args) {
+        String s1 = "Java is a popular programming language";
+        String word = "";
+        int wi = 0;
+        String[] words = new String[s1.length()];
+
+        for (int i = 0; i < s1.length(); i++) {
+            char ch = s1.charAt(i);
+            if (ch != ' ') {
+                word += ch;
+            } else {
+                if (!word.isEmpty()) {
+                    words[wi++] = word;
+                    word = "";
+                }
+            }
+        }
+
+        if (!word.isEmpty()) {
+            words[wi++] = word;
+        }
+
+        String[] arr2 = new String[words.length];
+        int arr2Index = 0;
+
+        for (int i = 0; i < wi; i++) {
+            String s2 = words[i];
+            if (s2 != null && s2.length() == 4) {
+                arr2[arr2Index++] = s2;
+            }
+        }
+
+        // Print non-null elements of arr2
+        System.out.println("Words with exactly 4 characters:");
+        for (int i = 0; i < arr2Index; i++) {
+            System.out.println(arr2[i]);
+        }
+    }
+}

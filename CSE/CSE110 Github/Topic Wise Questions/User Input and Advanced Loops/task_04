@@ -1,0 +1,29 @@
+
+import java.util.Scanner;
+public class no4 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter a positive integer N (N > 0): ");
+    int N = sc.nextInt();
+    if (N <= 0) {
+      System.out.println("Please enter a positive integer greater than 0.");
+      return;
+    }
+    int count = 0; // number of prime numbers
+    int number = 2; //i=number
+    while (count < N) {
+      int divisor = 0;
+      for (int j = 1; j <= number; j++) {
+        if (number % j == 0) {
+          divisor++;
+        }
+      }
+      if (divisor == 2) {
+        System.out.println(number);
+        count++;
+      }
+      number++;
+      sc.close();
+    }
+  }
+}

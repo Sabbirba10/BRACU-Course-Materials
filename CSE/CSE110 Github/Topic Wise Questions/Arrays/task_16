@@ -1,0 +1,22 @@
+
+import java.util.Scanner;
+
+public class task16 {
+    public static void main(String[] args) {
+        int[] arr1 = {7,10,4,3,20,15};
+        int k = 3;
+        for(int i =0; i<arr1.length-1;i++){
+            int mi= i;
+            for(int j=i+1;j<arr1.length;j++){
+                if(arr1[j]<arr1[mi]){
+                    mi=j;
+                }
+                int temp= arr1[mi];
+                arr1[mi]= arr1[i];
+                arr1[i]= temp;
+            }
+
+        }
+        System.out.println(k+"rd smallest element: "+ arr1[k-1]);
+    }
+}

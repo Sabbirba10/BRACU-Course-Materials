@@ -1,0 +1,9 @@
+public class task12 {
+  public static void main (String[] args) {
+    double r =4.0;  // r is radius here
+    double circumference = (2 * Math.PI * r);
+   double area = Math.PI * r * r; 
+    System.out.printf("Circumference of the circle: %.2f \n", circumference);
+        System.out.printf("Area of the circle: %.2f \n", area);
+  }
+}

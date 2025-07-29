@@ -1,0 +1,27 @@
+
+import java.util.Scanner;
+public class no10 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter an integer: ");
+    int number = sc.nextInt();
+    int oddnum = 1 ;
+    int j = 1 ;
+    while (j <= number) {
+      int i = 1 ;
+      for (int k = 1 ; k <= (number-j); k++){
+        System.out.print("   ");
+      }
+      while (i<= oddnum) {
+        System.out.print(i+" ");
+        i+= 1 ;
+      }
+      for (int k = 1 ; k <= number-j; k++){
+        System.out.print(" " );
+      }
+      oddnum += 2 ;
+      System.out.println();
+      j+= 1 ;
+    }
+  }
+}

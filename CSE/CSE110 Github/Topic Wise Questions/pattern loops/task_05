@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class pattern4_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+
+        for (int rc = 0; rc < row; rc++) {
+            // Print leading spaces for right alignment
+            for (int sC = 1; sC <= row - rc - 1; sC++) {
+                System.out.print(" ");
+            }
+
+            // Print the increasing part of the pattern
+            for (int cc = 0; cc < rc; cc++) {
+                System.out.print((int)Math.pow(2, cc) + " ");
+            }
+
+            // Print the decreasing part of the pattern
+            for (int cc = rc ; cc >= 0; cc--) {
+                System.out.print((int)Math.pow(2, cc) + " ");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+/* spaces er leigga ALWAYS REMEMBER ROW AR ROWCOUNT ONUJAI BANANMU
+For printing amra cc er hishabe nisi cuz emn e hoi arki
+try to connect cc with rc or row
+
+ */
